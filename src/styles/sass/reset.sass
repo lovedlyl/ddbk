@@ -1,0 +1,24 @@
+@import "colors", "layout"
+
+html 
+	font-size: $main-ftsize
+	color: $main-ftcolor
+	font-family: $main-ftfamily
+
+body, button, ul, li, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, input, form, textarea
+	margin: 0
+	padding: 0
+	list-style: none
+	border: 0
+	background: transparent
+
+a
+	color: $main-link-color
+	text-decoration: none
+
+// 清除浮动
+@import "engin"
+.clearfix
+	@extend %clearfix
+
+

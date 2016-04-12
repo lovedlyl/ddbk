@@ -1,0 +1,1749 @@
+@import colors
+
+@import layout
+@import compass
+@import compass/css3/user-interface
+@import engin
+
+@import dd-engin
+
+// 猜你喜欢顶部图片分割区结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 顶部工具栏!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 工具栏公共样式
+
+// 有上下小箭头的样式
+%updown
+	@extend %light-black-font-color
+	// 为了设置z-index设置为相对定位
+	@extend %relative
+	@extend %high-z-index
+	@extend %head-sprite
+	@extend %show-element
+	@extend %line-height-22px
+	background-position: right -304px
+	// 防止背景图污染,使用padding增加间隙,而不用line-height
+	padding: 3px 27px 0 8px
+
+
+%updown-on
+	@extend %white-background
+	background-position: right -321px
+	border: 1px solid #e6e6e6
+	border-bottom: none
+
+.hd
+	@extend %gray-background
+	border-bottom: 1px solid #f2f2f2
+	margin-bottom: 4px
+
+// 工具栏
+.tools
+	@extend %center-in-page
+	padding-top: 2px
+	.area
+		@extend %float-left
+
+	.newyork, .service, .company, .my, .phone, .self, .welcome
+		@extend %float-right
+
+// 送货地点
+
+.area
+	// 绝对定位body部分
+	@extend %relative
+
+	// 顶部
+	.head
+		@extend %updown
+		@extend %pointer-cursor
+		border: 1px solid $nav-bgcolor
+		border-bottom: none
+		padding-right: 20px
+		background-position: right -306px
+	.head.on
+		@extend %updown-on
+
+	// 主体部分
+	.body.on
+		@extend %show-element	
+	.body
+		@extend %hide-element
+		@extend %absolute
+		@extend %low-z-index
+		@extend %white-background
+		border: 1px solid #e6e6e6
+		left: 0
+		padding: 10px 0 10px 10px
+		top: 22px + 3px
+		width: 300px
+
+		a
+			// +border
+			@extend %float-left
+			@extend %line-height-24px
+			@extend %light-black-font-color
+			@extend %red-hover-link-without-underline
+			width: 60px
+
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!几个有下拉菜单的样式
+%line-height-22px 
+	height: 22px 
+	line-height: 22px
+// 上下箭头的样式继承
+.service, .company, .my
+	@extend %relative
+	// @extend %high-z-index
+	>a 
+		@extend %updown
+		@extend %show-element
+		border-top: 1px solid $nav-bgcolor
+
+	>a.on 
+		@extend %updown-on
+		@extend %red-hover-link-without-underline
+		padding-left: 7px
+		margin-right: -1px
+
+	ul.on 
+		@extend %show-element
+	ul
+		@extend %hide-element
+		@extend %absolute
+		@extend %white-background
+		@extend %low-z-index
+		@extend %gray-border
+		width: 82px
+		top: 25px 
+		left: 0
+		padding-bottom: 6px
+	li 
+		a 
+			@extend %light-black-font-color
+			@extend %show-element
+			line-height: 20px 
+			padding-left: 7px
+			&:hover
+				background-color: $nav-dk-bgcolor 
+
+
+// 小竖线
+.newyork, .service, .company, .my, .phone, .self
+	@extend %head-sprite
+	background-position: left -285px
+
+
+
+
+// 手机当当的样式
+.phone
+	@extend %relative
+	// +border
+	// @extend %line-height-24px
+	border-top: 1px solid $nav-bgcolor
+	padding-left: 26px
+	padding-right: 10px
+	@extend %line-height-30px
+	// line-height: 30px
+	// height: 22px
+	i
+		@extend %show-element
+		// +border
+		@extend %absolute
+
+		@extend %head-sprite
+
+		// +border
+		background-position: (-40px) -70px
+		height: 16px
+		left: 10px
+		top: 6px
+		width: 11px
+	>a 
+		@extend %show-element
+		@extend %line-height-30px
+		// height: 30px
+		// line-height: 30px
+		@extend %light-black-font-color
+		// +border
+	// 二维码
+	>div.on 
+		@extend %show-element
+	>div 
+		// +border
+		+box-shadow(1px 1px 0 0 #ebebeb)
+		@extend %hide-element
+		@extend %absolute
+		@extend %low-z-index
+		// @extend %white-background
+		@extend %gray-right-border
+		@extend %gray-bottom-border
+		@extend %gray-left-border
+		background: #fff url("../images/line_erweima.png") center 29px no-repeat
+		left: -1px
+		padding: 0 10px 
+		top: 25px
+		width: 200px
+		a 
+			// +border
+			@extend %float-left
+			@extend %text-align-center
+			width: 100px
+			img 
+				@extend %show-element
+				margin: 0 auto
+				width: 75px
+				height: 75px
+
+		span 
+			@extend %show-element
+			line-height: 14px
+			margin: 10px 0
+		span.head 
+			@extend %light-black-font-color
+			// margin: 5px 0
+
+.phone.on
+	// +box-shadow(1px 0 0 0 #ccc)
+	@extend %white-background
+	background-image: none
+	border: 1px solid #e6e6e6
+	border-bottom: none
+	margin-right: -1px 
+	padding-left: 25px
+	i
+		background-position: (-51px) -70px
+		// top: 2px
+		left: 9px
+	>a 
+		@extend %red-hover-link-without-underline
+
+
+
+
+		
+
+
+// 纽约样式
+.newyork > a
+	@extend %show-element
+	@extend %red-font-color
+	height: 26px 
+	line-height: 26px
+	padding-left: 38px
+	background: url("../images/nyse_icon.png") 10px center no-repeat
+
+.welcome
+	// +border 
+	height: 30px
+	line-height: 30px
+
+	.login
+		@extend %red-font-color
+	.regist 
+		@extend %light-black-font-color
+		@extend %red-hover-link-without-underline
+		padding-left: 5px 
+		padding-right: 5px
+.self
+	// +border
+	padding-left: 10px 
+	padding-right: 10px
+
+	// padding-top: 10px
+	a 
+		// +border
+		@extend %show-element
+		@extend %light-black-font-color
+		@extend %red-hover-link-without-underline
+		@extend %line-height-30px
+// 顶部工具栏结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// LOGO栏目
+.logo-line
+	// +border
+	margin-bottom: 20px
+
+	@extend %center-in-page
+
+	// 各部分的浮动
+	.logo, .search
+		@extend %float-left
+
+	.cat, .order
+		@extend %float-right
+
+	// 调整搜索,购物车,订单部分高度与logo顶部高度一致
+	.search, .cat, .order
+		@extend %margin-top-20px
+
+// 大logo
+.logo
+	// +border
+	+replace-with-image("../images/DDlogoNEW.gif", 342px, 77px)
+
+// 搜索部分
+form
+	// +border
+	input, .select
+		@extend %float-left
+
+	input[type="text"], .select > span
+		@extend %line-height-36px
+
+		border-top: 2px solid $theme-redcolor
+		border-bottom: 2px solid $theme-redcolor
+
+	// 搜索框
+	input[type="text"]
+		+placeholder-style($color: $light-black, $font-size: 12px)
+
+		@extend %no-outline
+
+		border-left: 2px solid $theme-redcolor
+		text-indent: 10px
+		width: 400px
+
+	// 提交按钮
+	input[type="button"]
+		@extend %head-sprite
+
+		@extend %no-outline
+
+		@extend %pointer-cursor
+
+		@extend %red-background
+
+		background-position: 0 -390px
+		width: 48px
+		height: 40px
+
+	// 类别选择
+
+.select
+	@extend %relative
+
+	> span
+		@extend %show-element
+
+		@extend %font-size-16px
+
+		@extend %head-sprite
+
+		@extend %pointer-cursor
+
+		@extend %dk-gray-background
+
+		@extend %padding-left-14px
+
+		// background-color: yellow
+		background-position: 74px -74px
+		color: #969696
+		width: 92px
+
+	ul
+		@extend %hide-element
+
+		@extend %gray-border
+
+		@extend %absolute
+
+		@extend %high-z-index
+
+		@extend %white-background
+
+		height: 12 * 24px
+		left: 0
+		top: 38px
+		overflow: auto
+		width: 100%
+
+	li
+		@extend %line-height-24px
+
+		a
+			@extend %light-black-font-color
+
+			@extend %padding-left-14px
+
+			@extend %show-element
+
+			// @extend %black-font-color
+
+	li.on
+		background-color: #ccc
+
+		a
+			&:hover
+				@extend %underline
+
+				@extend %white-font-color
+
+	ul.on
+		@extend %show-element
+
+// 底部
+.search-foot
+	margin-top: 4px
+
+	a
+		@extend %red-hover-link
+
+	> a
+		@extend %float-right
+
+	dl, dt, dd
+		@extend %float-left
+
+	dd a
+		padding-right: 15px
+
+	dt a
+		padding-right: 4px
+
+// 订单和购物车鼠标悬浮时相同的样式
+
+.order, .cat.on
+	@extend %font-size-14px
+
+	@extend %dk-gray-background
+
+	border: 2px solid $dk-gray
+
+// 我的订单的样式
+.order
+	@extend %gray-color-paragraph
+
+	@extend %line-height-36px
+
+	border-left: none
+	padding: 0 20px
+
+.order.on
+	@extend %red-hover-link-without-underline
+
+// 购物车的样式
+.cat
+	@extend %red-background
+
+	@extend %white-font-color
+
+	@extend %line-height-40px
+
+	background: $theme-redcolor url("../images/icon_cart.png") 5px 5px no-repeat
+	padding-right: 20px
+	padding-left: 40px
+
+	i, b
+		@extend %font-size-14px
+
+	i
+		font-style: normal
+
+	b
+		@extend %bold-font-weight
+
+		margin-left: 4px
+
+.cat.on
+	@extend %line-height-36px
+
+	@extend %red-font-color
+
+	background-position: 5px -34px
+	padding-left: 40px - 2px
+	padding-right: 20px - 2px
+
+// LOGO栏目饥结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 顶部导航
+// 全部商品导航
+.all-nav
+	// +border
+	// height: 40px
+	// @extend %hide-overflow
+	// margin-top: 40px
+	@extend %center-in-page
+
+	.menu, ul
+		@extend %float-left
+
+		height: 40px
+
+	// 菜单大块
+	.menu
+		.head
+			// +border
+			@extend %font-size-14px
+
+			@extend %line-height-40px
+
+			@extend %red-background
+
+			@extend %white-font-color
+
+			@extend %bold-font-weight
+
+			@extend %pointer-cursor
+
+			@extend %head-sprite
+
+			background-position: 160px -566px
+
+			// 右边多些间隙放背景图片
+			padding: 0 60px 0 20px
+
+		.body
+			@extend %hide-element
+
+	// 导航部分
+	ul
+		// +border
+		margin-left: 20px
+
+	li
+		@extend %float-left
+
+		@extend %line-height-40px
+
+		// margin-left: 20px
+		padding: 0 15px
+
+		a
+			@extend %font-size-14px
+
+			@extend %black-font-color
+
+			@extend %bold-font-weight
+
+			@extend %red-hover-link-without-underline
+
+	// 小黄图标的定位
+	li.hot
+		@extend %relative
+
+		img
+			@extend %absolute
+
+			left: 8px
+			top: -6px
+
+// 图书导航
+.book-nav
+	// +border
+	// 其它地方的背景灰色比这要淡些
+	background-color: #f5f5f5
+	border-top: 3px solid $theme-redcolor
+
+	ul
+		// +border
+		// 外层设置一个div元素,让其背景色填满整行,不管浏览器多宽
+		@extend %center-in-page
+
+	li
+		// +border
+		@extend %float-left
+
+		@extend %line-height-32px
+
+		background: url("../images/sub_line_bg.png") right center no-repeat
+		padding: 0 15px
+
+		a
+			@extend %red-hover-link
+
+			color: $nav-ftcolor
+
+// 顶部导航结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 第一个大块
+// 三列水平布局,都左浮动,190px + (750px + 10px + 10px) + 240px = 1200
+.section-one
+	// +border
+	+center-in-page($margin-top: 20px)
+
+	.book-menu, .section-one-main, .section-one-body
+		@extend %float-left
+
+// 全部图书分类
+.book-menu
+	$menu-width: 190px
+
+	a
+		@extend %gray-color-paragraph
+
+	.head
+		+border-top-radius(4px)
+
+		@extend %font-size-18px
+
+		@extend %line-height-36px
+
+		@extend %white-font-color
+
+		@extend %text-align-center
+
+		background-color: $theme-greencolor
+		height: 36px
+		width: 190px
+
+	.body
+		@extend %sidemenu-bg2
+
+		background-position: (-20px) 0
+		background-repeat: repeat-y
+		border-top: 2px dotted $theme-greencolor
+
+		// 为啥不直接用左右边框???
+		// border-left: 1px solid $theme-greencolor
+		// border-right: 1px solid $theme-greencolor
+
+	// 外层可见dl dt dd 描述内容
+	.outer
+		border-bottom: 1px dotted $theme-greencolor
+
+		// 声明宽度和左右外边距,刚好等于整个菜单的宽度
+		width: 170px
+		margin: 0 (($menu-width - 170px - 2px) / 2)
+
+		dt
+			// +border
+			@extend %line-height-30px
+
+			@extend %sidemenu-bg2
+
+			background-position: 160px 10px
+
+			a
+				@extend %font-size-14px
+
+				@extend %bold-font-weight
+
+				@extend %green-font-color
+
+				margin-right: 10px
+
+				&:hover
+					@extend %yellow-link-color
+
+		dd
+			// +border
+			a
+				@extend %float-left
+
+				@extend %yellow-hover-link
+
+				@extend %line-height-24px
+
+				background: url("../images/sidemenu_bg1.png") right center no-repeat
+
+				// 同时设置右内外边距,使背景图片看起来刚好在元素中间
+				padding-right: 5px
+				margin-right: 4px
+
+			a.last
+				background-image: none
+
+// 主体部分
+.section-one-main
+	// +border
+	margin: 0 10px
+	width: 750px
+
+	// 主体部分焦点图,相对定位,以便绝对定位原型按钮,并却每次只有单个图片显示
+	.play-pics
+		@extend %relative
+
+		.pic
+			@extend %hide-element
+
+		.pic.current
+			@extend %show-element
+
+		ul
+			@extend %absolute
+
+			bottom: 16px
+			right: 0
+
+		li
+			// 声明元素宽度和高度相等,就可以通过50%的border-radius使元素呈圆形
+			+border-radius(50%)
+
+			@extend %float-left
+
+			@extend %font-size-14px
+
+			@extend %black-font-color
+
+			@extend %text-align-center
+
+			@extend %pointer-cursor
+
+			background-color: #fff
+
+			// 高度和行高相等,使元素垂直方向居中显示
+			height: 21px
+			line-height: 21px
+			width: 21px
+			margin-right: 10px
+
+		li.on
+			background-color: $theme-redcolor-lighter
+
+	// 显示"新书上架"的背景图片
+	// 由于没有使用与其它三级标题相同的背景图片,所以只是单独使用了一个div而不是h3
+	.head
+		+replace-with-image("../images/new_book.png", 750px, 43px)
+
+		// +replace-text-with-dimensions("new_book.png")
+		margin-top: 10px
+
+// 第一大块侧边栏
+// %padding-left-10px
+
+.section-one-sidebar
+	// +border
+	width: 238px
+
+	@extend %float-right
+
+	// 最新动态和新书预售都有10px的内边距,以及边框
+	.dongtai, .yushou
+		@extend %gray-border
+
+		padding-top: 10px
+		margin-bottom: 10px
+
+		h2
+			@extend %black-font-color
+
+			@extend %font-size-16px
+
+			margin-bottom: 4px
+
+	// 最新动态的样式
+	.dongtai
+		padding-left: 10px
+
+		li
+			@extend %line-height-24px
+
+			@extend %sprite
+
+			background-position: (-16px) -160px
+			text-indent: 7px
+
+			a
+				@extend %black-font-color
+
+				@extend %yellow-hover-link
+
+	// 预售的样式
+	.yushou
+		@extend %relative
+
+		h2
+			padding-left: 10px
+
+			// 微调,使下边对其左边焦点图左下边
+			margin-bottom: 14px
+
+		.more
+			@extend %absolute
+
+			top: 12px
+			right: 10px
+
+		// 覆盖默认的标题显示宽度
+		.sidebar-book .title
+			width: 84px
+
+		// 为无缝滚动设置的样式
+		// 为按钮留下空间
+		.slide
+			padding-bottom: 30px
+
+		// 改变定位元素的位置
+		.slide-prev
+			left: 0
+
+		.slide-next
+			right: 0
+
+		.slide-btns
+			bottom: 10px
+
+	// 最新动态和预售样式结束
+
+// 第一个大块结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 当当特供
+// 样式与主编推荐几乎一致
+// 当当特供结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 主编推荐
+.zhubian-suggest, .dd-tegong
+	// +border
+	@extend %center-in-page
+
+// 主体部分
+.zhubian-suggest-main, .dd-tegong-main
+	@extend %body-with-right-margin
+
+	.head
+		@extend %h3-father-box
+
+		@extend %h3-nav
+
+	.books
+		@extend %hide-element
+
+	.books.current
+		@extend %show-element
+
+.zhubian-suggest .sidebar-with-list .head
+	border-bottom: 2px solid $theme-greencolor
+
+// 当当特供和主编推荐h3设置不同的背景图片
+// h3背景图片位置不一样
+.dd-tegong h3
+	background-position: 0 0
+
+.zhubian-suggest h3
+	background-position: 0 -75px
+
+// 当当特供下方图片分割区设置上外边距
+.dd-tegong + .space-pics
+	@extend %margin-top-20px
+
+// 当当特供 和 主编推荐 结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 作者推荐
+.author
+	@extend %center-in-page
+
+	@extend %margin-top-20px
+
+.author-main
+	@extend %body-with-right-margin
+
+	@extend %gray-border
+
+	// 默认继承了950px的宽度,所以减去2px ---> 948px
+	width: $main-width - $sidebar-width - 12px
+
+// 主体头部导航
+.author-main-head
+	$height: 34px
+	ul
+		margin-bottom: -1px
+
+	li
+		// +border
+		@extend %float-left
+
+		@extend %text-align-center
+
+		@extend %pointer-cursor
+
+		@extend %font-size-16px
+
+
+		// font-size: 16px
+		line-height: $height
+		width: 120px
+
+	// .first
+	li.on
+		// ie bug
+		@extend %relative
+		@extend %bold-font-weight
+
+		@extend %gray-left-border
+
+		@extend %gray-right-border
+
+		@extend %green-font-color
+		@extend %white-background
+		margin-left: -1px
+		margin-top: -2px
+
+		// 设置背景色,掩盖下边框
+		background: #fff
+		border-top: 2px solid $theme-greencolor
+
+// 主体内容
+.author-main-body
+	// 公共样式
+	$img-width: 145px
+	@extend %gray-top-border
+	padding: 10px
+
+	// 作者名字
+	.name
+		@extend %black-font-color
+
+		@extend %bold-font-weight
+
+		@extend %yellow-hover-link
+
+		@extend %show-element
+
+		font-size: 18px
+
+		// padding-top: 20px
+
+	// 公共样式结束
+
+	> div
+		@extend %hide-element
+
+	> div.current
+		@extend %show-element
+
+	// 热门作者
+	.books-container
+		// +border
+		@extend %float-left
+
+		// 使同行的3个展示区下边框在同一位置出现
+		padding-bottom: 12px
+		width: 750px
+
+	// 利用-margin定位
+	.horizontal-author
+		@extend %dotted-gray-bottom
+
+		@extend %relative
+
+		margin-left: 30px
+		padding-bottom: 20px
+
+		// height: 280px
+		img
+			// +border
+			width: $img-width
+
+		.name
+			@extend %show-element
+
+			margin-top: -$img-width + 20px
+
+		.intro
+			@extend %line-height-24px
+
+			@extend %hide-overflow
+
+			@extend %gray-color-paragraph
+
+			height: 96px
+			margin-top: 10px
+
+		.name, .intro
+			margin-left: $img-width + 20px
+
+		.icon
+			+border-radius(5px)
+
+			@extend %absolute
+
+			@extend %line-height-24px
+
+			@extend %font-size-14px
+
+			background-color: #f8f8f8
+			padding: 0 20px
+			bottom: -12px
+			left: 0
+
+	// 下方的图书
+	.books
+		margin-bottom: 10px
+
+		.price
+			@extend %margin-top-20px
+
+	// 右边的作者列表
+	.books-container + ul
+		// +border
+		@extend %float-right
+
+		@extend %gray-background
+
+		@extend %gray-border
+
+		padding: 0 4px
+		width: 132px
+
+		li
+			@extend %pointer-cursor
+
+			border-top: 1px solid #fff
+			border-bottom: 1px solid #e1e1e1
+			line-height: 42px
+
+			&:hover .No, &:hover a
+				color: $theme-redcolor-lighter
+
+				// text-decoration: none
+
+		li.first
+			border-top: none
+
+		li.last
+			border-bottom: none
+
+		.No
+			@extend %green-font-color
+
+			margin-left: 10px
+
+		a
+			// text-indent: 20px
+			margin-left: 20px
+
+	// 名人堂和新锐作者样式一样
+	// 在原来的基础上加上10px
+	.famous-author, .new-author
+		padding: 10px 10px 0 20px
+
+	.author-vertical
+		// +border
+		@extend %float-left
+
+		@extend %text-align-center
+
+		margin-right: 40px
+		width: $img-width
+
+		.name
+			line-height: 42px
+
+		.intro
+			@extend %text-align-left
+
+			@extend %line-height-24px
+
+			@extend %gray-color-paragraph
+
+			@extend %hide-overflow
+
+			// 最多显示10行24*11=264
+			height: 264px
+
+	// 标题图书和下方的图书目录
+	.title-book
+		// +border
+		.title
+			margin-bottom: 24px * 2
+
+		.summary
+			height: 24px * 3
+
+	.works
+		@extend %float-left
+
+		width: 710px
+		border-left: 1px dotted $gray-border-color
+
+		.title-book, dl
+			margin-left: 30px
+
+		.title-book
+			padding-top: 0
+
+		dl
+			// +border
+			margin-top: 40px
+			margin-bottom: 40px
+
+			dt, dd
+				@extend %float-left
+
+				@extend %font-size-14px
+
+			dt
+				@extend %bold-font-weight
+
+			dd
+				margin-left: 10px
+
+				a
+					@extend %blue-color
+
+					&:hover, &:focus
+						@extend %underline
+
+// 作者推荐侧边栏
+.author-sidebar
+	@extend %sidebar-without-border
+
+	@extend %float-right
+
+	a
+		@extend %show-element
+
+		margin-bottom: 10px
+
+	img
+		width: $sidebar-width
+
+// 作者推荐结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 作者推荐下方图片分割区
+.author + .space-pics
+	@extend %margin-top-20px
+
+	border-bottom: none
+	padding: 30px 0 0 0
+
+// 猜你喜欢
+.guess
+	// +border
+	@extend %center-in-page
+
+	margin-bottom: 40px
+
+.guess-head
+	@extend %h3-father-box
+
+	margin-top: 10px
+
+	h3
+		background-position: 0 -150px
+
+	// 换一批的点击样式
+	a
+		// +border
+		// 有背景图片,背景图片宽度为21px,所以向右内边距25px
+		@extend %h3-slibling-box
+
+		@extend %font-size-14px
+
+		@extend %blue-color
+
+		@extend %show-element
+
+		@extend %line-height-30px
+
+		@extend %sprite
+
+		background-position: 0 -46px
+		text-indent: 25px
+
+		&:hover, &:hover
+			@extend %underline
+
+// 猜你喜欢头部结束
+// 猜你喜欢底部
+.guess-foot
+	// +border
+
+// 猜你喜欢底部主体部分, 图书展示区
+.guess-foot-main
+	@extend %body-with-right-margin
+
+	> div
+		@extend %hide-element
+
+	.current
+		@extend %show-element
+
+// 猜你喜欢底部主体结束
+// 猜你喜欢底部侧边栏
+.guess-foot-sidebar
+	// @extend %float-right
+	@extend %gray-background
+
+	@extend %sidebar-without-border
+
+	@extend %float-right
+
+	// ?????????????
+	height: 100%
+	padding-top: 20px
+
+	// width: 200px
+	h1, ul
+		padding-left: 30px
+
+	h1
+		@extend %line-height-24px
+
+		@extend %normal-font-weight
+
+		@extend %green-font-color
+
+		@extend %font-size-16px
+
+		// font-size: 16px
+
+	ul
+		// +border
+
+	li
+		@extend %float-left
+
+		@extend %line-height-30px
+
+		// 设置宽度,使每行呈现2个作者名字
+		width: 105px
+
+		// +border
+		a
+			@extend %black-font-color
+
+			@extend %yellow-hover-link
+
+// 猜你喜欢结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 读者推荐
+// 每小块都左右padding14px
+%padding-left-14px
+	padding-left: 14px
+
+%padding-right-14px
+	padding-right: 14px
+
+.reader-suggest
+	@extend %center-in-page
+
+	@extend %gray-bottom-border
+
+	padding-bottom: 20px
+
+// 读者推荐主体部分
+.reader-suggest-main
+	@extend %body-with-right-margin
+
+	// +border
+
+// 读者推荐主体顶部
+.reader-suggest-main-head
+	// +border
+	@extend %h3-father-box
+
+	// 3级标题导航
+	@extend %h3-nav
+
+	h3
+		background-position: 0 -223px
+
+// 读者推荐栏主体部分
+.reader-suggest-main-body
+	// 第一个子元素都不显示,只有类为.current的类显示
+	> div
+		@extend %hide-element
+
+	> div.current
+		@extend %show-element
+
+	.books
+		width: 950px
+		margin-top: 20px
+
+		// @extend %margin-top-20px
+
+	// 为了定位数字
+	.book
+		@extend %relative
+
+	.num
+		@extend %font-size-18px
+
+		@extend %high-z-index
+
+		top: -30px
+		left: 24px
+
+		// font-size: 18px
+
+	.title-book .num
+		top: 10px
+		left: 10px
+
+	// 颜色和默认的颜色有所区别
+	.num.first, .num.second, .num.third
+		color: $theme-redcolor-lighter
+
+// 读者推荐侧边栏
+.reader-suggest-sidebar
+	@extend %sidebar-with-borders
+
+	@extend %float-right
+
+	// 所有链接和图片都为块状显示
+	a, img
+		@extend %show-element
+
+	// 顶部链接用背景图片,238px
+	.community
+		+replace-with-image("../images/book_community_bg.png", 238px, 84px)
+
+		// +replace-text-with-dimensions("book_community_bg.png")
+
+	h2
+		@extend %padding-left-14px
+
+		@extend %normal-font-weight
+
+		@extend %green-font-color
+
+		@extend %font-size-18px
+
+		@extend %line-height-36px
+
+		margin-top: 10px
+
+	.summary
+		@extend %padding-left-14px
+
+		@extend %padding-right-14px
+
+		@extend %black-font-color
+
+		@extend %line-height-24px
+
+		@extend %font-size-14px
+
+		@extend %bold-font-weight
+
+		@extend %yellow-hover-link
+
+	// 仅有的一个图片
+	img
+		// 只设置宽度,高度会随比列缩放
+		width: 150px
+
+		// 居中显示,上下有间距
+		margin: 30px auto
+
+	.details
+		@extend %black-font-color
+
+		@extend %line-height-24px
+
+		@extend %padding-left-14px
+
+		@extend %padding-right-14px
+
+		@extend %yellow-hover-link
+
+	// 最下端两个按钮
+	.btns
+		@extend %padding-left-14px
+
+		@extend %padding-right-14px
+
+		@extend %twenty-vertical-margin
+
+		// 两个按钮的公共样式
+		a
+			// +border
+			@extend %white-font-color
+
+			@extend %font-size-14px
+
+			@extend %text-align-center
+
+			@extend %line-height-28px
+
+			width: 98px
+
+		// 对两个按钮分别设置样式
+		.dianzishu
+			@extend %float-left
+
+			background-color: $theme-redcolor-lighter
+
+			&:hover
+				background-color: $theme-redcolor-darker
+
+		.kehuduan
+			@extend %float-right
+
+			background-color: $theme-greencolor
+
+			&:hover
+				background-color: $theme-greencolor-darker
+
+// 读者推荐结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 尾品会
+.vip
+	$item-width: 1200 - 2 - 5
+
+	@extend %gray-top-border
+
+	@extend %gray-left-border
+
+	@extend %gray-right-border
+
+	@extend %center-in-page
+
+	@extend %twenty-vertical-margin
+
+	li
+		@extend %float-left
+
+		@extend %gray-left-border
+
+		@extend %gray-bottom-border
+
+		@extend %hide-overflow
+
+		height: 178px
+
+		// 199*6+5=1199 比1200少了1px, 不过肉眼看不明显
+		width: 199px
+
+	img
+		width: 199px
+
+	// 每行最左边的元素没有左边框
+	li.first
+		border-left: none
+
+	li.vip-book
+		// 使打折 和书名都绝对定位
+		@extend %relative
+
+		// overflow: display
+		@extend %hide-overflow
+
+		img
+			width: 120px
+
+			// 块级显示,以便居中
+			@extend %show-element
+
+			// 图片居中显示,并有上外边距
+			margin: 10px auto
+
+		span
+			@extend %absolute
+
+			+nowrap
+
+			bottom: 10px
+
+		.discount
+			color: #da245d
+			font-size: 20px
+			left: 12px
+
+		.title
+			left: 72px
+
+	// 当整个盒子鼠标悬浮时,标题部分有样式改变
+	a .title
+		@extend %yellow-hover-link
+
+// 尾品会结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 合作伙伴
+// 合作伙伴的公共样式,ul和h2都左padding 16px
+$parteners-public-padding-left: 16px
+
+%parteners-public-padding
+	padding-left: $parteners-public-padding-left
+
+.parteners
+	// +border(yellow)
+	// 在页面居中,并且有灰色背景
+	@extend %center-in-page
+
+	@extend %gray-background
+
+	h2
+		@extend %gray-bottom-border
+
+		@extend %parteners-public-padding
+
+		@extend %bold-font-weight
+
+		@extend %font-size-18px
+
+		@extend %black-font-color
+
+		// font-size: 18px
+		line-height: 42px
+
+	.cats
+		height: 178px
+		margin-top: 2px
+
+		div
+			@extend %float-left
+
+			// 相对定位,以便定位图片
+			@extend %relative
+
+			@extend %gray-left-border
+
+			// 为了撑开整个div,让img上面有更大的间隙,增加margin
+			padding: 10px 0 100px 0
+
+			// 不是太精确,不过不易观察到
+			width: 239px
+
+		div.first
+			border-left: none
+
+	// ul 和 img的样式,为了代码清晰,没有嵌套
+	ul
+		@extend %parteners-public-padding
+
+		> li
+			// 为了使间距更大,没有采用字体x2的行高
+			line-height: 34px
+
+		a
+			@extend %yellow-hover-link
+
+	img
+		width: 170px
+		height: 42px
+
+		@extend %absolute
+
+		left: $parteners-public-padding-left
+		bottom: 20px
+
+// 合作伙伴结束 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 页尾 所有文本都采用居中形式
+.foot
+	@extend %text-align-center
+
+	margin-bottom: 50px
+
+// 图片栏
+.foot-pic
+	@extend %gray-bottom-border
+
+	@extend %gray-background
+
+	border-top: 2px solid $theme-redcolor
+	padding: 10px 0
+
+	> a
+		// 为了居中显示,所以设置为行内块级元素
+		@extend %inlineblock
+
+		+hide-with-image("../images/footer_bg.png")
+
+		background-position: 0 0
+		height: 52px
+		width: 138px
+
+	> .pic2, > .pic3, > .pic4
+		margin-left: 100px
+
+	> .pic2
+		background-position: 0 -51px
+
+	> .pic3
+		background-position: 0 -103px
+
+	> .pic4
+		background-position: 0 -156px
+
+// 图片栏结束
+// 公共服务
+.foot-public
+	// +border
+	@extend %gray-bottom-border
+
+	padding: 30px 0 20px 0
+
+	> div
+		@extend %inlineblock
+
+		margin: 0 40px
+
+	span
+		font-size: 14px
+		line-height: 28px
+
+	li
+		@extend %line-height-24px
+
+	a
+		@extend %yellow-hover-link
+
+// 导航
+//
+$hot-search-color: #f48570
+
+// .foot-copywrite和.foot-nav链接的公共样式
+%foot-link-public-style
+	@extend %underline
+
+	color: $hot-search-color
+
+.foot-nav
+	margin-top: 20px
+
+	@extend %relative
+
+	> span
+		@extend %gray-font-color
+
+		padding: 0 20px
+
+	> a:hover, .hot-search > a:hover
+		@extend %foot-link-public-style
+
+	// 隐藏的热词些
+	// inlineblock"热词搜索"处在上一行
+	.hot-search
+		@extend %inlineblock
+
+		@extend %relative
+
+		// 当鼠标悬浮时,整个盒子可见,并且也是inlineblock,不然会出现在下一行
+		&:hover > div
+			@extend %inlineblock
+
+		// 包含字母链接的盒子,开始为隐藏
+		> div
+			@extend %hide-element
+
+			@extend %absolute
+
+			+border-radius(8px)
+
+			background: $hot-search-color
+			right: -8px
+			top: 20px
+			width: 300px
+
+			// 字母链接样式
+			> a
+				color: #fff
+
+			> a:hover
+				@extend %no-text-decoration
+
+			// 制作小的三角形,并相对于上一级div绝对定位
+			> i
+				@extend %absolute
+
+				// @extend show-element
+				border-width: 0 4px 4px
+				border-color: #fff #fff $hot-search-color #fff
+				border-style: solid
+				font-size: 0
+				height: 0
+				line-height: 0
+				right: 28px
+				top: -4px
+				width: 0
+
+// 版权
+.foot-copywrite
+	// +border
+	@extend %margin-top-20px
+
+	> span, > a
+		padding-right: 4px
+
+	> span
+		@extend %gray-font-color
+
+	> a:hover, a:focus
+		@extend %foot-link-public-style
+
+// 页尾结束
+
+// 返回顶部+客户端二维码
+
+.backtop
+	$main-width: 54px
+	$small-erweima-width: 48px
+	$erweima-pic-width: 170px
+	$erweima-pic-height: 134px
+	$margin-space: 6px
+	$fixed-position-bottom: 100px
+	$fixed-position-right: -($main-width - $small-erweima-width)
+
+	position: fixed
+	right: $fixed-position-right
+	bottom: $fixed-position-bottom
+
+	// +border
+	// 块级显示,为设置背景图片而设置高度
+	a
+		// +border
+		@extend %show-element
+
+		// 防止图片加载失败给定背景颜色
+		@extend %gray-background
+
+	// 二维码,两个链接使用同一张背景图片,相对定位,以便大图绝对定位
+	.erweima
+		@extend %relative
+
+		.small, .big
+			background-image: url(../images/erweima_home.png)
+
+		.small
+			@extend %hide-text
+
+			height: $small-erweima-width
+			background-position: (-($erweima-pic-width - $small-erweima-width)) 0
+
+			// padding-right:
+			width: $small-erweima-width
+
+			&:hover
+				background-position: (-($erweima-pic-width - $small-erweima-width)) (-$small-erweima-width - 4px)
+
+				+ .big
+					@extend %show-element
+
+		.big
+			// +border
+			@extend %hide-element
+
+			@extend %absolute
+
+			height: $erweima-pic-height
+			right: $main-width
+			top: 0
+			width: $erweima-pic-width - $small-erweima-width
+
+	// 调研和返回顶部按钮使用同一张精灵图,上外边距相同
+	.diaoyan, .back
+		background-image: url(../images/backtop2.png)
+		margin-top: $margin-space
+
+	// 调研, 为了使文字居中,下部显示,设置line-height和padding-top两者相加为54px
+	.diaoyan
+		@extend %line-height-24px
+
+		@extend %text-align-center
+
+		background-position: 0 0
+		height: 24px
+		padding-top: $main-width - 24px
+		width: $main-width
+
+		&:hover, &:focus
+			@extend %white-font-color
+
+			background-position: (-$main-width) 0
+
+	// 返回顶部按钮
+	.back
+		// @extend %show-element
+		@extend %hide-text
+
+		height: $main-width
+		background-position: 0 -#{$main-width}
+		width: $main-width
+
+		&:hover, &:focus
+			background-position: -#{$main-width} -#{$main-width}

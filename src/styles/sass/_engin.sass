@@ -1,0 +1,198 @@
+// 一些常用的CSS属性使用占位选择器,避免生成后的样式表冗长
+
+// 按字母顺序排序
+// 为了避免没使用compass的情况,将compass的mixin手动书写
+
+
+// 绝对定位
+%absolute
+	position: absolute
+
+// 为了在写样式时方便观察,添加边框,默认为黑色
+=border($color: #000, $width: 1px)
+	border: $width solid $color
+
+// 各部分主体在页面中垂直居中
+=center-in-page($width: $main-width, $margin-top: 0, $margin-bottom: 0)
+	margin: $margin-top auto $margin-bottom auto 
+	width: $width
+
+// 清除浮动
+// .clearfix
+// 	+legacy-pie-clearfix
+%clearfix 
+	*zoom: 1
+	&:after 
+		content: "\0020"
+		display: block
+		height: 0
+		clear: both
+		overflow: hidden
+		visibility: hidden
+
+// 粗体显示字体
+%bold-font-weight
+	font-weight: bold 
+
+// 左右浮动
+%float-left
+	float: left 
+%float-right
+	float: right 
+
+// 字体大小,及将字体居中显示的行高
+%font-size-12px 
+	font-size: 12px 
+%line-height-24px
+	line-height: 24px 
+
+%font-size-14px
+	font-size: 14px
+%line-height-28px 
+	line-height: 28px 
+
+%font-size-16px 
+	font-size: 16px 
+%line-height-32px 
+	line-height: 32px 
+
+%font-size-18px
+	font-size: 18px
+%line-height-36px 
+	line-height: 36px
+	height: 36px
+
+// 隐藏元素
+%hide-element
+	display: none
+
+// 只是隐藏文字,手动设置背景图片
+// %hide-text
+// 	$hide-text-direction: right
+// 	+hide-text 
+%hide-text 
+	text-indent: 110%
+	white-space: nowrap
+	overflow: hidden
+// 相当于compass的replace-with-dimensions,
+// 不过没有指定元素的尺寸来适应背景图片的小刚好合适
+// 默认背景图片放在正中,背景色为白色
+
+=hide-with-image($img-url)
+	@extend %hide-text
+	background: url(#{$img-url}) 50% 50% no-repeat
+	
+// 隐藏溢出元素
+%hide-overflow
+	overflow: hidden
+
+%high-z-index
+	z-index: 10
+
+// 设置placeholder的颜色和字体大小
+=placeholder-style($color: inherit, $font-size: inherit, $font-style: inherit)
+	&::-webkit-input-placeholder
+		color: $color 
+		font-size: $font-size 
+		font-style: $font-style
+
+	&:-ms-input-placeholder
+		color: $color 
+		font-size: $font-size 
+		font-style: $font-style
+
+	&::-moz-placeholder
+		color: $color 
+		font-size: $font-size 
+		font-style: $font-style
+	
+	&:-moz-placeholder
+		color: $color 
+		font-size: $font-size 
+		font-style: $font-style
+
+	&:-ms-input-placeholder
+		color: $color 
+		font-size: $font-size 
+		font-style: $font-style
+
+// 鼠标悬浮时增加下划线
+%underline
+	text-decoration: underline
+
+
+// 行内块级显示元素
+// %inlineblock
+// 	+inline-block($alignment: false)
+%inlineblock 
+	display: -moz-inline-stack
+	display: inline-block
+	*vertical-align: auto
+	zoom: 1
+	*display: inline
+
+%no-outline
+	outline: none 
+
+// background-image不重复
+%norepeat
+	background-repeat: no-repeat 
+
+// 没有线型文本装饰
+%no-text-decoration
+	text-decoration: none 
+
+// 鼠标悬浮时,只改变字体颜色,没有下划线
+=no-underline-link($color: inherit)
+	@extend %no-text-decoration
+	&:hover, &:focus
+		@extend %no-text-decoration
+		color: $color
+// 
+%negtive-z-index
+	z-index: -5
+
+// 正常字体大小
+%normal-font-weight 
+	font-weight: normal 
+
+%low-z-index
+	z-index: 5
+
+// 手形鼠标悬浮
+%pointer-cursor
+	cursor: pointer 
+
+// 相对定位
+%relative
+	position: relative
+
+// 与compass的replace-with-dimensions相同,不不过需要手动设置元素大小
+// 以刚好填满整个元素
+// 如果元素不是块级显示,需要手动设置为块级显示,
+// 就在mixin中声明为块级可能方便些,不过也可能造成不必要的重复声明
+// 比如元素本来就是块级显示, 如div
+=replace-with-image($image-url, $width, $height)
+	+hide-with-image($image-url)
+	// @extend %show-element
+	width: $width 
+	height: $height
+
+// 元素块级显示
+%show-element
+	display: block
+
+// 文本居中和左对齐显示
+%text-align-center
+	text-align: center 
+%text-align-left
+	text-align: left
+
+// 鼠标悬浮时,更改字体颜色和下划线装饰,默认颜色继承
+=underline-link($color: inherit)
+	@extend %no-text-decoration
+	&:hover, &:focus
+		@extend %underline
+		color: $color 
+
+		

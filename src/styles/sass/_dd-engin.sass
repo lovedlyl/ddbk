@@ -1,0 +1,794 @@
+// 当当图书样式表中常用的样式占位,避免生成后的样式表冗长
+@import engin
+
+@import colors
+
+@import layout
+
+// 为了使用border-radius
+@import compass
+
+// 通用样式
+
+// 大部分内容区域都是950px, 右外边距10px 侧边栏240px,如果有边框,各自计算,而且都向左浮动
+%body-with-right-margin
+	$margin-width: 10px
+	@extend %float-left
+	margin-right: $margin-width
+	width: 950px
+
+%black-font-color
+	color: $black-ftcolor
+
+%blue-color
+	color: $unchanged-link-hover-color
+
+// 主要大块宽度为1200px,区中显示
+%center-in-page
+	+center-in-page(1200px)
+
+%dk-gray-background
+	background-color: #f6f6f6
+
+// 所有使用head_sprite.png作为背景图的元素,各自背景图位置自己调
+%head-sprite
+	background-image: url("../images/head_sprite.png")
+	background-position: 50% 50%
+	background-repeat: no-repeat
+
+//大部分段落字体颜色,以及部分链接颜色
+%gray-color-paragraph
+	color: $paragraph-color
+
+// .horizontal-author(水平放置的作者介绍), .title-book(标题显示书籍)都有
+%dotted-gray-bottom
+	border-bottom: 1px dotted $gray-border-color
+
+// 灰色背景
+%gray-background
+	background-color: $nav-bgcolor
+
+// 灰色字体
+%gray-font-color
+	color: $main-link-color
+
+// 各个边上的灰色实体边框
+%gray-top-border
+	border-top: 1px solid $gray-border-color
+
+%gray-right-border
+	border-right: 1px solid $gray-border-color
+
+%gray-left-border
+	border-left: 1px solid $gray-border-color
+
+%gray-bottom-border
+	border-bottom: 1px solid $gray-border-color
+
+%gray-border
+	border: 1px solid $gray-border-color
+
+// 蓝色及浅蓝色
+%green-font-color
+	color: $theme-greencolor
+
+%green-font-color-lighter
+	color: $theme-greencolor-lighter
+
+// 浅黑色字体颜色
+%light-black-font-color
+	color: #646464
+
+// 40pxline-height
+// 对于单行显示文字,可以设置高度和行高同时进行,避免出现多余高度差
+%line-height-40px
+	line-height: 40px
+	height: 40px
+
+%line-height-30px
+	line-height: 30px
+	height: 30px
+
+// 上外边距20px
+%margin-top-20px
+	margin-top: 20px
+
+// 鼠标悬浮时,红色字体,有下滑线和没有下划线
+%red-hover-link
+	+underline-link($theme-redcolor)
+
+%red-hover-link-without-underline
+	+no-underline-link($theme-redcolor)
+
+// 红色背景色
+%red-background
+	background-color: $theme-redcolor
+
+// 红色字体
+%red-font-color
+	color: $theme-redcolor
+
+// 使用sidemenu_bg2.png作为背景图片
+
+%sidemenu-bg2
+	background-image: url("../images/sidemenu_bg2.png")
+	background-repeat: no-repeat
+
+// 声明侧边栏宽的,如果有边框,边框样式一样
+%sidebar-without-border
+	width: $sidebar-width
+
+// 自动声明了宽度4边边框
+%sidebar-with-borders
+	@extend %gray-border
+
+	width: $sidebar-width - 2px
+
+// 使用sprite.png
+%sprite
+	background-image: url("../images/sprite.png")
+	background-repeat: no-repeat
+
+// 上下都有20px的外边距
+%twenty-vertical-margin
+	margin-top: 20px
+	margin-bottom: 20px
+
+// 白色字体
+%white-font-color
+	color: $white-ftcolor
+
+// 白色背景
+%white-background
+	background-color: #fff
+
+%yellow-hover-link
+	+underline-link($link-hover-color)
+
+%yellow-link-color
+	color: $link-hover-color
+
+// 鼠标悬浮时黄色字体+下划线
+// %yellow-hover-link
+// 	@extend %underline
+// 	color: $link-hover-color
+
+// 每个水平排列的元素之间如果有间隙,都采用左外边距,最后一个的左边外边距为0
+// %zero-margin
+// 	margin: 0
+
+%zero-margin-left
+	margin-left: 0
+
+// 通用样式结束
+
+// 所有三级标题都是隐藏文字,用同一张背景图片替换.并却绝对定位,有相同的有外边距
+h3
+	@extend %absolute
+
+	+hide-with-image("../images/title_sprite.png")
+
+	// @extend %hide-text
+	// background: #fff url("../images/title_sprite.png") 50% 50% no-repeat
+	left: 0
+	top: 0
+	height: 50px
+	width: 108px
+
+// 三级标题所在div都有绿色下边框,相对定位,使h3绝对定位,高度是背景图片的高度
+%h3-father-box
+	@extend %relative
+
+	border-bottom: 1px solid $theme-greencolor
+	height: 50px
+
+	@extend %margin-top-20px
+
+// 使三级标题兄弟元素显示出来, 并且如果是列表有透明度设置,所以使用局对定位
+%h3-slibling-box
+	@extend %absolute
+
+	left: 150px
+	top: 8px
+
+%h3-nav
+	ul
+		@extend %absolute
+
+		// 压到下边框线
+		bottom: -1px
+		right: 20px
+
+	li
+		@extend %float-left
+
+		@extend %font-size-14px
+
+		@extend %line-height-28px
+
+		@extend %gray-color-paragraph
+
+		@extend %pointer-cursor
+
+		// 为了掩盖下面的边框,设置背景色,并且起初z-index为负数,以便显示下边框
+		// FUCK这是一个bug,如果太低,鼠标点击时,实质上是没点到
+		// 绝对定位后,设置背景色就可以覆盖
+		background-color: $white-ftcolor
+		height: 28px
+		padding: 0 15px
+
+	li.on
+		+border-top-radius(6px)
+
+		@extend %bold-font-weight
+
+		@extend %green-font-color
+
+		border: 2px solid $theme-greencolor
+		border-bottom: none
+
+// 三级标题样式结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 三类不同显示图书的样式
+// .book, .title-book, .sidebar-book的公共样式,以.book为基准
+.book, .title-book, .sidebar-book
+	// +border
+	// 展示图片
+	// 直接使用 extend %yellow-hover-link会导致生成样式表中的兄弟选择器消失??
+	// 鼠标悬浮时,标题也会有鼠标悬浮的效果,下划线+黄色字体
+	.pic:hover + .title
+		@extend %underline
+
+		color: $link-hover-color
+
+	//
+	.pic
+		// +border
+		// 块级显示,不然背景图片不能正确放置
+		@extend %relative
+
+		@extend %show-element
+
+		img
+			width: 150px
+
+		// 换购,抢,满立减的背景图片
+		.hot
+			// +border
+			// @extend %show-element
+			@extend %absolute
+
+			// @extend %negtive-z-index
+			+replace-with-image("../images/hg.png", 52px, 52px)
+
+			// +replace-text-with-dimensions("hg.png")
+			top: 0
+			right: 0
+
+	// 抢 满立减用不同的背景图片
+	.pic.qiang .hot
+		background-image: url(../images/xsq.png)
+
+	.pic.jian .hot
+		background-image: url(../images/mej.png)
+
+	// 书名, 为了设置-margin都是块级显示
+	.title
+		@extend %yellow-hover-link
+
+		@extend %show-element
+
+	// 价格
+	.price
+		@extend %font-size-14px
+
+		.new
+			@extend %bold-font-weight
+
+			color: $theme-redcolor-darker
+
+		.old
+			@extend %gray-font-color
+
+			text-decoration: line-through
+			margin-left: 14px
+
+// .book 和 .sidebar-book的书名公共样式样式
+.book, .sidebar-book
+	.title
+		// +border
+		// text-align: left
+		@extend %black-font-color
+
+		@extend %hide-overflow
+
+		// 最多显示两行,而且溢出部分隐藏
+		height: 36px
+		line-height: 18px
+
+// 位于侧边栏的单个图书样式
+
+.sidebar-book
+	// +border
+	$img-width: 120px
+	.pic
+		width: $img-width
+		height: $img-width
+
+		img
+			width: $img-width
+			height: $img-width
+
+	// 微调背景图片位置
+	.pic .hot
+		right: 4px
+
+	// 标题只能是固定宽度
+	.title
+		width: 72px
+
+	.title, .price, .comment 
+		margin-left: $img-width
+	.title 
+		margin-top: -$img-width + 20px
+	// 价格
+	.price
+		// 块级显示
+		.new, .old
+			@extend %show-element
+
+			margin: 6px 0
+
+		// 抵消公共样式中的左外边距
+		.old
+			@extend %zero-margin-left
+
+	// .comment
+	// // width: 40px
+	.comment, .comment a
+		@extend %green-font-color-lighter
+
+	.comment a
+		&:hover, &:focus
+			@extend %underline
+
+
+
+
+
+
+.book, .title-book
+	// 星星
+	$star-width: 14px
+
+	.star
+		@extend %show-element
+
+		// 每颗星星的宽高都是14px,一般为5颗
+		background: url(../images/book_star_bg.png) 0 0 repeat-x
+		height: $star-width
+		margin-top: 5px
+		margin-bottom: 5px
+		width: $star-width * 5
+
+	// 灰色的星星背景图片
+	.no-star
+		background-position: 0 -#{$star-width}
+
+// 单本图示的展示样式,各部分可能不同,都写在一起,各个部分的自己调
+
+.book
+	// 每个图书展示所占宽度
+	$book-width: 150px
+
+	// 没列多少本图书
+	$books-each-row: 5
+
+	// +border
+	// 块级显示,左浮动
+	@extend %show-element
+
+	@extend %float-left
+
+	// 所有文本和图片居中显示
+	// @extend %text-align-center
+	// 宽度为图片宽度150px
+	// height: 233px
+	// 计算所得,以便浮动后每列出现图书数量一致
+	margin-left: 46px
+
+	// margin-left: 52px
+	margin-top: 20px
+	margin-bottom: 20px
+
+	// 每个展示区域宽度,刚号好是图书图片的宽度
+	width: $book-width
+
+	.pic .hot
+		top: -6px
+
+	// 标题 星星 价格都左右padding,以便与图书左下角对其,并且为块级显示
+	.title, .star
+		@extend %show-element
+
+	.title, .star, .price, .author, .tegong
+		margin-left: 20px
+
+	// 标题,黑色字体,最多两行
+	// 增加有外边距,使其外边不超出图片外边
+	.title
+		margin-right: 20px
+
+	// 作者名字
+	.author
+		@extend %gray-font-color
+
+		@extend %line-height-24px
+
+		// 防止浏览器忽略作者名字间的空格
+		white-space: pre
+
+	// 为了设置背景图片,块级设置,设置高度
+	.tegong
+		@extend %show-element
+
+		@extend %line-height-24px
+
+		@extend %green-font-color-lighter
+
+		@extend %sprite
+
+		background-position: 0 -87px
+		text-indent: 21px
+
+// 浮动后的每行图书第一个没有左外边距
+.book.first
+	@extend %zero-margin-left
+
+// 作为醒目的图书预览
+
+// 使用-margin而不是浮动
+.title-book
+	$img-width: 200px
+
+	padding: 40px 10px 20px 0
+
+	@extend %relative
+
+	@extend %dotted-gray-bottom
+
+	// +border
+	// 图片块样式
+
+	.pic
+		width: $img-width
+		height: $img-width
+
+		img
+			width: $img-width
+			height: $img-width
+
+		.hot
+			top: -14px
+			right: 0
+
+	// 其它所有元素左margin
+	.title, .price, .summary, .star
+		margin-left: $img-width + 10px
+
+	// 将它们往上提
+	.title
+		@extend %black-font-color
+
+		@extend %font-size-14px
+
+		margin-top: -$img-width
+
+	.price
+		@extend %line-height-30px
+
+	.summary
+		@extend %gray-color-paragraph
+
+		@extend %line-height-24px
+
+		@extend %hide-overflow
+
+		height: 120px
+
+//各种图书样式设置结束 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 无缝滚动翻页箭头和按钮样式,都绝对定位到.slide上
+// 定位以读者推荐为准
+.slide
+	$nav-img: "../images/book_fanye_btn.png"
+	$btn-img: "../images/diandian_bg2.png"
+	$btn-width: 10px
+	$btn-height: 10px
+	$nav-height: 48px
+	$nav-width: 25px
+
+	.slide-prev, .slide-next
+		@extend %absolute
+
+		@extend %pointer-cursor
+
+		@extend %hide-text
+
+		background: #ccc url(#{$nav-img})
+		height: $nav-height
+
+		// 在js插件中,根据显示高度,计算设置其距离上部的距离,以便在中间显示
+		// top: $show-height / 3
+		width: $nav-width
+
+		// z-index: 1000
+
+	// 为避免背景图片加载失败,增加背景颜色
+	.slide-prev.on, .slide-next.on
+		background-color: $theme-greencolor
+
+	.slide-prev
+		background-position: 0 0
+		left: 2px
+
+	.slide-prev.on
+		background-position: 0 -#{$nav-height + 3px}
+
+	.slide-next
+		background-position: -#{2 + $nav-width} 0
+		right: 2px
+
+	.slide-next.on
+		background-position: -#{2 + $nav-width} -#{$nav-height + 3px}
+
+	// 原点按钮样式
+	.slide-btns
+		// border: 1px solid black
+		@extend %absolute
+
+		@extend %text-align-center
+
+		bottom: 0
+		left: 0
+		width: 100%
+
+		li
+			// border: 1px solid black
+			@extend %inlineblock
+
+			@extend %hide-text
+
+			@extend %pointer-cursor
+
+			background: #ccc url(#{$btn-img}) 0 -20px
+			height: $btn-height
+			line-height: $btn-height
+			margin: 0 5px
+			width: $btn-width
+
+		li.on
+			background-color: $theme-greencolor-darker
+			background-position: 0 0
+
+// 无缝滚动样式结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 侧边栏图书列表的样式
+.sidebar-with-list
+	@extend %float-right
+
+	// 有左右边框,所以减去2px
+	width: $sidebar-width - 2px
+
+	// 侧边栏标题样式
+	.head
+		// +border
+		// 本来是a元素,为了添加背景图片,块级显示,text-indent出一定位置
+		@extend %show-element
+
+		@extend %black-font-color
+
+		@extend %font-size-16px
+
+		@extend %bold-font-weight
+
+		@extend %sprite
+
+		background-position: 5px 4px
+		height: 40px
+		line-height: 40px
+
+		// 微调,以和导航栏水平对齐
+		margin-top: 28px
+		text-indent: 31px
+
+		&:hover, &:focus
+			@extend %yellow-hover-link
+
+	// 导航部分
+	.nav
+		// +border
+		// 有多少个项目
+		$li-nums: 5
+		$li-width: (238 - $li-nums - 1) / $li-nums
+
+		li
+			@extend %float-left
+
+			// @extend %gray-top-border
+
+			@extend %gray-right-border
+
+			@extend %gray-bottom-border
+
+			@extend %text-align-center
+
+			@extend %line-height-24px
+
+			width: #{$li-width}px
+
+			a
+				@extend %black-font-color
+
+		li.first
+			@extend %gray-left-border
+
+		li.on
+			border-top: 2px solid $theme-greencolor
+			border-bottom: none
+
+			a
+				@extend %green-font-color
+
+				@extend %bold-font-weight
+
+				@extend %underline
+
+	// 开始都是隐藏,只是类为current的显示,所以只有一个表单时,记得设置其类为.current
+	.list.current
+		@extend %show-element
+
+	// 包含一个无序列表和 "查看完整榜单"
+	.list
+		@extend %hide-element
+
+		@extend %gray-left-border
+
+		@extend %gray-right-border
+
+		@extend %gray-bottom-border
+
+		li
+			// 相对定位,以定位数字
+			@extend %relative
+
+			@extend %dotted-gray-bottom
+
+			padding: 10px 0
+			margin: 0 10px 0 5px
+
+			.sidebar-book
+				@extend %hide-element
+
+			// 起初可见的标题
+			// 给定右外边距以增加空格
+			> a
+				+nowrap
+
+				@extend %hide-overflow
+
+				// 为了设置margin和text-indent块级显示
+				@extend %show-element
+
+				@extend %black-font-color
+
+				margin-right: 20px
+
+				// 为了显示左边数字
+				text-indent: 40px
+
+			// 可见的图书,左外边距,为了显示数字,图片左端本来有空白,所以少了20px
+			.sidebar-book
+				margin-left: 20px
+
+		// 开始只有第一个表元素显示图书,不显示标题,鼠标悬浮时改变类得到控制
+		li.on
+			.sidebar-book
+				@extend %show-element
+
+			> a
+				@extend %hide-element
+
+		// 最后一个没有下边框
+		li.last
+			border-bottom: none
+
+		// 可见标题的样式
+		.num
+			left: 10px
+			top: 10px
+
+			@extend %high-z-index
+
+	// 参看更多的样式
+	.more
+		// +border
+		// 块级显示,以便换行,以及设置text-indent
+		@extend %show-element
+
+		@extend %line-height-40px
+
+		// 使其与上面元素有一定距离
+		// line-height: 40px
+		padding-right: 10px
+		text-align: right
+
+// 侧边栏图书列表结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 更多的公共样式
+.more
+	@extend %blue-color
+
+	&:hover, &:focus
+		@extend %underline
+
+// 图书展示上方的数字
+// 绝对定位,默认以读者推荐区域位置为准
+.num
+	@extend %absolute
+
+	@extend %font-size-16px
+
+	// font-size: 16px
+	left: 24px
+	top: -10px
+
+// 数字1 2 3 显示为红色
+.num.first, .num.second, .num.third
+	color: $theme-redcolor-darker
+
+// 绝对定位数字结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// 图片分割区
+// 1个图片作为图片分割区
+.space-pic
+	@extend %text-align-center
+
+	@extend %twenty-vertical-margin
+
+	// text-indent 只应用于块级元素
+	@extend %show-element
+
+	img
+		width: 1200px
+
+// 3个图片的图片分割区
+// 猜你喜欢顶部图片分割区
+.space-pics
+	// +border
+	$image-width: 382px
+
+	// @extend %twenty-vertical-margin
+	@extend %center-in-page
+
+	@extend %gray-top-border
+
+	@extend %gray-bottom-border
+
+	// 居中显示
+	margin: 0 auto
+	padding-top: 30px
+	padding-bottom: 30px
+
+	a
+		@extend %float-left
+
+		margin-left: ($main-width - $image-width * 3) / 2
+
+	a.first
+		@extend %zero-margin-left
+
+	img
+		width: $image-width
+
+// 图片分割区结束!!!!!!!!!!!!!!!!!!!!!!!!!!
