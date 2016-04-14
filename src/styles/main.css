@@ -1,12 +1,12 @@
-h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav li.hot img, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
+h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav li.hot img, .book-menu .outer + div, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
   position: absolute;
 }
 
-.zhubian-suggest-main .head li.on, .dd-tegong-main .head li.on, .reader-suggest-main-head li.on, .book .price .new, .title-book .price .new, .sidebar-book .price .new, .sidebar-with-list .head, .sidebar-with-list .nav li.on a, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .outer dt a, .author-main-head li.on, .author-main-body .name, .author-main-body .works dl dt, .reader-suggest-sidebar .summary, .parteners h2 {
+.zhubian-suggest-main .head li.on, .dd-tegong-main .head li.on, .reader-suggest-main-head li.on, .book .price .new, .title-book .price .new, .sidebar-book .price .new, .sidebar-with-list .head, .sidebar-with-list .nav li.on a, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .body dt a, .author-main-head li.on, .author-main-body .name, .author-main-body .works dl dt, .reader-suggest-sidebar .summary, .parteners h2 {
   font-weight: bold;
 }
 
-.zhubian-suggest-main, .dd-tegong-main, .author-main, .guess-foot-main, .reader-suggest-main, .zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book, .sidebar-with-list .nav li, .space-pics a, .tools .area, .area .body a, .phone > div a, .logo-line .logo, .logo-line .search, form input, form .select, .search-foot dl, .search-foot dt, .search-foot dd, .all-nav .menu, .all-nav ul, .all-nav li, .book-nav li, .section-one .book-menu, .section-one .section-one-main, .section-one .section-one-body, .book-menu .outer dd a, .section-one-main .play-pics li, .author-main-head li, .author-main-body .books-container, .author-main-body .author-vertical, .author-main-body .works, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-foot-sidebar li, .reader-suggest-sidebar .btns .dianzishu, .vip li, .parteners .cats div {
+.zhubian-suggest-main, .dd-tegong-main, .author-main, .guess-foot-main, .reader-suggest-main, .zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book, .sidebar-with-list .nav li, .space-pics a, .tools .area, .area .body a, .phone > div a, .logo-line .logo, .logo-line .search, form input, form .select, .search-foot dl, .search-foot dt, .search-foot dd, .all-nav .menu, .all-nav ul, .all-nav li, .book-nav li, .section-one .book-menu, .section-one .section-one-main, .section-one .section-one-body, .book-menu .body dd a, .book-menu .inner dt, .book-menu .inner dd, .section-one-main .play-pics li, .author-main-head li, .author-main-body .books-container, .author-main-body .author-vertical, .author-main-body .works, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-foot-sidebar li, .reader-suggest-sidebar .btns .dianzishu, .vip li, .parteners .cats div {
   float: left;
 }
 
@@ -14,11 +14,11 @@ h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .re
   float: right;
 }
 
-.book .author, .book .tegong, .title-book .summary, .sidebar-with-list .nav li, .area .body a, .select li, .book-menu .outer dd a, .section-one-sidebar .dongtai li, .author-main-body .horizontal-author .intro, .author-main-body .horizontal-author .icon, .author-main-body .author-vertical .intro, .guess-foot-sidebar h1, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .foot-public li, .backtop .diaoyan {
+.book .author, .book .tegong, .title-book .summary, .sidebar-with-list .nav li, .area .body a, .select li, .book-menu .body dt a, .book-menu .body dd a, .section-one-sidebar .dongtai li, .author-main-body .horizontal-author .intro, .author-main-body .horizontal-author .icon, .author-main-body .author-vertical .intro, .guess-foot-sidebar h1, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .foot-public li, .backtop .diaoyan {
   line-height: 24px;
 }
 
-.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .outer dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
+.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .body dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
   font-size: 14px;
 }
 
@@ -43,7 +43,7 @@ form input[type="text"], form .select > span, .order, .cat.on, .book-menu .head,
   height: 36px;
 }
 
-.sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
+.sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body, .book-menu .outer + div, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
   display: none;
 }
 
@@ -57,11 +57,11 @@ h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .sli
   overflow: hidden;
 }
 
-.sidebar-with-list .list .num, .area .head, .service > a, .company > a, .my > a, .select ul, .reader-suggest-main-body .num {
+.sidebar-with-list .list .num, .area .head, .service > a, .company > a, .my > a, .select ul, .book-menu .outer, .reader-suggest-main-body .num {
   z-index: 10;
 }
 
-.search-foot a:hover, .book-nav li a:hover, .search-foot a:focus, .book-nav li a:focus, .book .title:hover, .title-book .title:hover, .sidebar-book .title:hover, .sidebar-with-list .head:hover, .book-menu .outer dd a:hover, .section-one-sidebar .dongtai li a:hover, .author-main-body .name:hover, .guess-foot-sidebar li a:hover, .reader-suggest-sidebar .summary:hover, .reader-suggest-sidebar .details:hover, .vip a .title:hover, .parteners ul a:hover, .foot-public a:hover, .book .title:focus, .title-book .title:focus, .sidebar-book .title:focus, .sidebar-with-list .head:focus, .book-menu .outer dd a:focus, .section-one-sidebar .dongtai li a:focus, .author-main-body .name:focus, .guess-foot-sidebar li a:focus, .reader-suggest-sidebar .summary:focus, .reader-suggest-sidebar .details:focus, .vip a .title:focus, .parteners ul a:focus, .foot-public a:focus, .book .pic:hover + .title, .title-book .pic:hover + .title, .sidebar-book .pic:hover + .title, .sidebar-book .comment a:hover, .sidebar-book .comment a:focus, .sidebar-with-list .nav li.on a, .more:hover, .more:focus, .select li.on a:hover, .author-main-body .works dl dd a:hover, .author-main-body .works dl dd a:focus, .guess-head a:hover, .foot-nav > a:hover, .foot-nav .hot-search > a:hover, .foot-copywrite > a:hover, .foot-copywrite a:focus {
+.search-foot a:hover, .book-nav li a:hover, .search-foot a:focus, .book-nav li a:focus, .book .title:hover, .title-book .title:hover, .sidebar-book .title:hover, .sidebar-with-list .head:hover, .book-menu .body dd a:hover, .section-one-sidebar .dongtai li a:hover, .author-main-body .name:hover, .guess-foot-sidebar li a:hover, .reader-suggest-sidebar .summary:hover, .reader-suggest-sidebar .details:hover, .vip a .title:hover, .parteners ul a:hover, .foot-public a:hover, .book .title:focus, .title-book .title:focus, .sidebar-book .title:focus, .sidebar-with-list .head:focus, .book-menu .body dd a:focus, .section-one-sidebar .dongtai li a:focus, .author-main-body .name:focus, .guess-foot-sidebar li a:focus, .reader-suggest-sidebar .summary:focus, .reader-suggest-sidebar .details:focus, .vip a .title:focus, .parteners ul a:focus, .foot-public a:focus, .book .pic:hover + .title, .title-book .pic:hover + .title, .sidebar-book .pic:hover + .title, .sidebar-book .comment a:hover, .sidebar-book .comment a:focus, .sidebar-with-list .nav li.on a, .more:hover, .more:focus, .select li.on a:hover, .author-main-body .works dl dd a:hover, .author-main-body .works dl dd a:focus, .guess-head a:hover, .foot-nav > a:hover, .foot-nav .hot-search > a:hover, .foot-copywrite > a:hover, .foot-copywrite a:focus {
   text-decoration: underline;
 }
 
@@ -77,7 +77,7 @@ form input[type="text"], form input[type="button"] {
   outline: none;
 }
 
-.search-foot a, .book-nav li a, .area .body a, .service > a.on, .company > a.on, .my > a.on, .phone.on > a, .welcome .regist, .self a, .order.on, .all-nav li a, .self a:hover, .all-nav li a:hover, .self a:focus, .all-nav li a:focus, .book .title, .title-book .title, .sidebar-book .title, .sidebar-with-list .head:hover, .sidebar-with-list .head:focus, .book-menu .outer dd a, .section-one-sidebar .dongtai li a, .author-main-body .name, .guess-foot-sidebar li a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .vip a .title, .parteners ul a, .foot-public a, .foot-nav .hot-search > div > a:hover {
+.search-foot a, .book-nav li a, .area .body a, .service > a.on, .company > a.on, .my > a.on, .phone.on > a, .welcome .regist, .self a, .order.on, .all-nav li a, .self a:hover, .all-nav li a:hover, .self a:focus, .all-nav li a:focus, .book .title, .title-book .title, .sidebar-book .title, .sidebar-with-list .head:hover, .sidebar-with-list .head:focus, .book-menu .body dd a, .section-one-sidebar .dongtai li a, .author-main-body .name, .guess-foot-sidebar li a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .vip a .title, .parteners ul a, .foot-public a, .foot-nav .hot-search > div > a:hover {
   text-decoration: none;
 }
 
@@ -85,7 +85,7 @@ form input[type="text"], form input[type="button"] {
   font-weight: normal;
 }
 
-.area .body, .service ul, .company ul, .my ul, .phone > div {
+.area .body, .service ul, .company ul, .my ul, .phone > div, .book-menu .outer + div {
   z-index: 5;
 }
 
@@ -93,11 +93,11 @@ form input[type="text"], form input[type="button"] {
   cursor: pointer;
 }
 
-.zhubian-suggest-main .head, .dd-tegong-main .head, .guess-head, .reader-suggest-main-head, .book .pic, .title-book .pic, .sidebar-book .pic, .title-book, .sidebar-with-list .list li, .area .head, .service > a, .company > a, .my > a, .area, .service, .company, .my, .phone, .select, .all-nav li.hot, .section-one-main .play-pics, .section-one-sidebar .yushou, .author-main-head li.on, .author-main-body .horizontal-author, .reader-suggest-main-body .book, .vip li.vip-book, .parteners .cats div, .foot-nav, .foot-nav .hot-search, .backtop .erweima {
+.zhubian-suggest-main .head, .dd-tegong-main .head, .guess-head, .reader-suggest-main-head, .book .pic, .title-book .pic, .sidebar-book .pic, .title-book, .sidebar-with-list .list li, .area .head, .service > a, .company > a, .my > a, .area, .service, .company, .my, .phone, .select, .all-nav li.hot, .book-menu .body, .book-menu .outer, .section-one-main .play-pics, .section-one-sidebar .yushou, .author-main-head li.on, .author-main-body .horizontal-author, .reader-suggest-main-body .book, .vip li.vip-book, .parteners .cats div, .foot-nav, .foot-nav .hot-search, .backtop .erweima {
   position: relative;
 }
 
-.book .pic, .title-book .pic, .sidebar-book .pic, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
+.book .pic, .title-book .pic, .sidebar-book .pic, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .book-menu .outer + div.current, .book-menu .outer + div .pic, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
   display: block;
 }
 
@@ -109,15 +109,15 @@ form input[type="text"], form input[type="button"] {
   text-align: left;
 }
 
-h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav li.hot img, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
+h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav li.hot img, .book-menu .outer + div, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
   position: absolute;
 }
 
-.zhubian-suggest-main .head li.on, .dd-tegong-main .head li.on, .reader-suggest-main-head li.on, .book .price .new, .title-book .price .new, .sidebar-book .price .new, .sidebar-with-list .head, .sidebar-with-list .nav li.on a, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .outer dt a, .author-main-head li.on, .author-main-body .name, .author-main-body .works dl dt, .reader-suggest-sidebar .summary, .parteners h2 {
+.zhubian-suggest-main .head li.on, .dd-tegong-main .head li.on, .reader-suggest-main-head li.on, .book .price .new, .title-book .price .new, .sidebar-book .price .new, .sidebar-with-list .head, .sidebar-with-list .nav li.on a, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .body dt a, .author-main-head li.on, .author-main-body .name, .author-main-body .works dl dt, .reader-suggest-sidebar .summary, .parteners h2 {
   font-weight: bold;
 }
 
-.zhubian-suggest-main, .dd-tegong-main, .author-main, .guess-foot-main, .reader-suggest-main, .zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book, .sidebar-with-list .nav li, .space-pics a, .tools .area, .area .body a, .phone > div a, .logo-line .logo, .logo-line .search, form input, form .select, .search-foot dl, .search-foot dt, .search-foot dd, .all-nav .menu, .all-nav ul, .all-nav li, .book-nav li, .section-one .book-menu, .section-one .section-one-main, .section-one .section-one-body, .book-menu .outer dd a, .section-one-main .play-pics li, .author-main-head li, .author-main-body .books-container, .author-main-body .author-vertical, .author-main-body .works, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-foot-sidebar li, .reader-suggest-sidebar .btns .dianzishu, .vip li, .parteners .cats div {
+.zhubian-suggest-main, .dd-tegong-main, .author-main, .guess-foot-main, .reader-suggest-main, .zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book, .sidebar-with-list .nav li, .space-pics a, .tools .area, .area .body a, .phone > div a, .logo-line .logo, .logo-line .search, form input, form .select, .search-foot dl, .search-foot dt, .search-foot dd, .all-nav .menu, .all-nav ul, .all-nav li, .book-nav li, .section-one .book-menu, .section-one .section-one-main, .section-one .section-one-body, .book-menu .body dd a, .book-menu .inner dt, .book-menu .inner dd, .section-one-main .play-pics li, .author-main-head li, .author-main-body .books-container, .author-main-body .author-vertical, .author-main-body .works, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-foot-sidebar li, .reader-suggest-sidebar .btns .dianzishu, .vip li, .parteners .cats div {
   float: left;
 }
 
@@ -125,11 +125,11 @@ h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .re
   float: right;
 }
 
-.book .author, .book .tegong, .title-book .summary, .sidebar-with-list .nav li, .area .body a, .select li, .book-menu .outer dd a, .section-one-sidebar .dongtai li, .author-main-body .horizontal-author .intro, .author-main-body .horizontal-author .icon, .author-main-body .author-vertical .intro, .guess-foot-sidebar h1, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .foot-public li, .backtop .diaoyan {
+.book .author, .book .tegong, .title-book .summary, .sidebar-with-list .nav li, .area .body a, .select li, .book-menu .body dt a, .book-menu .body dd a, .section-one-sidebar .dongtai li, .author-main-body .horizontal-author .intro, .author-main-body .horizontal-author .icon, .author-main-body .author-vertical .intro, .guess-foot-sidebar h1, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .foot-public li, .backtop .diaoyan {
   line-height: 24px;
 }
 
-.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .outer dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
+.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .body dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
   font-size: 14px;
 }
 
@@ -154,7 +154,7 @@ form input[type="text"], form .select > span, .order, .cat.on, .book-menu .head,
   height: 36px;
 }
 
-.sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
+.sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body, .book-menu .outer + div, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
   display: none;
 }
 
@@ -168,11 +168,11 @@ h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .sli
   overflow: hidden;
 }
 
-.sidebar-with-list .list .num, .area .head, .service > a, .company > a, .my > a, .select ul, .reader-suggest-main-body .num {
+.sidebar-with-list .list .num, .area .head, .service > a, .company > a, .my > a, .select ul, .book-menu .outer, .reader-suggest-main-body .num {
   z-index: 10;
 }
 
-.search-foot a:hover, .book-nav li a:hover, .search-foot a:focus, .book-nav li a:focus, .book .title:hover, .title-book .title:hover, .sidebar-book .title:hover, .sidebar-with-list .head:hover, .book-menu .outer dd a:hover, .section-one-sidebar .dongtai li a:hover, .author-main-body .name:hover, .guess-foot-sidebar li a:hover, .reader-suggest-sidebar .summary:hover, .reader-suggest-sidebar .details:hover, .vip a .title:hover, .parteners ul a:hover, .foot-public a:hover, .book .title:focus, .title-book .title:focus, .sidebar-book .title:focus, .sidebar-with-list .head:focus, .book-menu .outer dd a:focus, .section-one-sidebar .dongtai li a:focus, .author-main-body .name:focus, .guess-foot-sidebar li a:focus, .reader-suggest-sidebar .summary:focus, .reader-suggest-sidebar .details:focus, .vip a .title:focus, .parteners ul a:focus, .foot-public a:focus, .book .pic:hover + .title, .title-book .pic:hover + .title, .sidebar-book .pic:hover + .title, .sidebar-book .comment a:hover, .sidebar-book .comment a:focus, .sidebar-with-list .nav li.on a, .more:hover, .more:focus, .select li.on a:hover, .author-main-body .works dl dd a:hover, .author-main-body .works dl dd a:focus, .guess-head a:hover, .foot-nav > a:hover, .foot-nav .hot-search > a:hover, .foot-copywrite > a:hover, .foot-copywrite a:focus {
+.search-foot a:hover, .book-nav li a:hover, .search-foot a:focus, .book-nav li a:focus, .book .title:hover, .title-book .title:hover, .sidebar-book .title:hover, .sidebar-with-list .head:hover, .book-menu .body dd a:hover, .section-one-sidebar .dongtai li a:hover, .author-main-body .name:hover, .guess-foot-sidebar li a:hover, .reader-suggest-sidebar .summary:hover, .reader-suggest-sidebar .details:hover, .vip a .title:hover, .parteners ul a:hover, .foot-public a:hover, .book .title:focus, .title-book .title:focus, .sidebar-book .title:focus, .sidebar-with-list .head:focus, .book-menu .body dd a:focus, .section-one-sidebar .dongtai li a:focus, .author-main-body .name:focus, .guess-foot-sidebar li a:focus, .reader-suggest-sidebar .summary:focus, .reader-suggest-sidebar .details:focus, .vip a .title:focus, .parteners ul a:focus, .foot-public a:focus, .book .pic:hover + .title, .title-book .pic:hover + .title, .sidebar-book .pic:hover + .title, .sidebar-book .comment a:hover, .sidebar-book .comment a:focus, .sidebar-with-list .nav li.on a, .more:hover, .more:focus, .select li.on a:hover, .author-main-body .works dl dd a:hover, .author-main-body .works dl dd a:focus, .guess-head a:hover, .foot-nav > a:hover, .foot-nav .hot-search > a:hover, .foot-copywrite > a:hover, .foot-copywrite a:focus {
   text-decoration: underline;
 }
 
@@ -188,7 +188,7 @@ form input[type="text"], form input[type="button"] {
   outline: none;
 }
 
-.search-foot a, .book-nav li a, .area .body a, .service > a.on, .company > a.on, .my > a.on, .phone.on > a, .welcome .regist, .self a, .order.on, .all-nav li a, .self a:hover, .all-nav li a:hover, .self a:focus, .all-nav li a:focus, .book .title, .title-book .title, .sidebar-book .title, .sidebar-with-list .head:hover, .sidebar-with-list .head:focus, .book-menu .outer dd a, .section-one-sidebar .dongtai li a, .author-main-body .name, .guess-foot-sidebar li a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .vip a .title, .parteners ul a, .foot-public a, .foot-nav .hot-search > div > a:hover {
+.search-foot a, .book-nav li a, .area .body a, .service > a.on, .company > a.on, .my > a.on, .phone.on > a, .welcome .regist, .self a, .order.on, .all-nav li a, .self a:hover, .all-nav li a:hover, .self a:focus, .all-nav li a:focus, .book .title, .title-book .title, .sidebar-book .title, .sidebar-with-list .head:hover, .sidebar-with-list .head:focus, .book-menu .body dd a, .section-one-sidebar .dongtai li a, .author-main-body .name, .guess-foot-sidebar li a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .vip a .title, .parteners ul a, .foot-public a, .foot-nav .hot-search > div > a:hover {
   text-decoration: none;
 }
 
@@ -196,7 +196,7 @@ form input[type="text"], form input[type="button"] {
   font-weight: normal;
 }
 
-.area .body, .service ul, .company ul, .my ul, .phone > div {
+.area .body, .service ul, .company ul, .my ul, .phone > div, .book-menu .outer + div {
   z-index: 5;
 }
 
@@ -204,11 +204,11 @@ form input[type="text"], form input[type="button"] {
   cursor: pointer;
 }
 
-.zhubian-suggest-main .head, .dd-tegong-main .head, .guess-head, .reader-suggest-main-head, .book .pic, .title-book .pic, .sidebar-book .pic, .title-book, .sidebar-with-list .list li, .area .head, .service > a, .company > a, .my > a, .area, .service, .company, .my, .phone, .select, .all-nav li.hot, .section-one-main .play-pics, .section-one-sidebar .yushou, .author-main-head li.on, .author-main-body .horizontal-author, .reader-suggest-main-body .book, .vip li.vip-book, .parteners .cats div, .foot-nav, .foot-nav .hot-search, .backtop .erweima {
+.zhubian-suggest-main .head, .dd-tegong-main .head, .guess-head, .reader-suggest-main-head, .book .pic, .title-book .pic, .sidebar-book .pic, .title-book, .sidebar-with-list .list li, .area .head, .service > a, .company > a, .my > a, .area, .service, .company, .my, .phone, .select, .all-nav li.hot, .book-menu .body, .book-menu .outer, .section-one-main .play-pics, .section-one-sidebar .yushou, .author-main-head li.on, .author-main-body .horizontal-author, .reader-suggest-main-body .book, .vip li.vip-book, .parteners .cats div, .foot-nav, .foot-nav .hot-search, .backtop .erweima {
   position: relative;
 }
 
-.book .pic, .title-book .pic, .sidebar-book .pic, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
+.book .pic, .title-book .pic, .sidebar-book .pic, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .book-menu .outer + div.current, .book-menu .outer + div .pic, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
   display: block;
 }
 
@@ -252,7 +252,7 @@ form input[type="text"], form input[type="button"] {
   color: #666666;
 }
 
-.title-book, .sidebar-with-list .list li, .author-main-body .horizontal-author {
+.title-book, .sidebar-with-list .list li, .book-menu .inner, .author-main-body .horizontal-author {
   border-bottom: 1px dotted #ebebeb;
 }
 
@@ -284,7 +284,7 @@ form input[type="text"], form input[type="button"] {
   border: 1px solid #ebebeb;
 }
 
-.zhubian-suggest-main .head li.on, .dd-tegong-main .head li.on, .reader-suggest-main-head li.on, .sidebar-with-list .nav li.on a, .book-menu .outer dt a, .author-main-head li.on, .author-main-body .books-container + ul .No, .guess-foot-sidebar h1, .reader-suggest-sidebar h2 {
+.zhubian-suggest-main .head li.on, .dd-tegong-main .head li.on, .reader-suggest-main-head li.on, .sidebar-with-list .nav li.on a, .book-menu .body dt a, .author-main-head li.on, .author-main-body .books-container + ul .No, .guess-foot-sidebar h1, .reader-suggest-sidebar h2 {
   color: #487a6f;
 }
 
@@ -359,15 +359,15 @@ form input[type="button"], .cat, .all-nav .menu .head {
   color: white;
 }
 
-.area .head.on, .service > a.on, .company > a.on, .my > a.on, .area .body, .service ul, .company ul, .my ul, .phone.on, .select ul, .author-main-head li.on {
+.area .head.on, .service > a.on, .company > a.on, .my > a.on, .area .body, .service ul, .company ul, .my ul, .phone.on, .select ul, .book-menu .outer.on, .book-menu .outer + div, .author-main-head li.on {
   background-color: white;
 }
 
-.book .title:hover, .title-book .title:hover, .sidebar-book .title:hover, .sidebar-with-list .head:hover, .book-menu .outer dd a:hover, .section-one-sidebar .dongtai li a:hover, .author-main-body .name:hover, .guess-foot-sidebar li a:hover, .reader-suggest-sidebar .summary:hover, .reader-suggest-sidebar .details:hover, .vip a .title:hover, .parteners ul a:hover, .foot-public a:hover, .book .title:focus, .title-book .title:focus, .sidebar-book .title:focus, .sidebar-with-list .head:focus, .book-menu .outer dd a:focus, .section-one-sidebar .dongtai li a:focus, .author-main-body .name:focus, .guess-foot-sidebar li a:focus, .reader-suggest-sidebar .summary:focus, .reader-suggest-sidebar .details:focus, .vip a .title:focus, .parteners ul a:focus, .foot-public a:focus {
+.book .title:hover, .title-book .title:hover, .sidebar-book .title:hover, .sidebar-with-list .head:hover, .book-menu .body dd a:hover, .section-one-sidebar .dongtai li a:hover, .author-main-body .name:hover, .guess-foot-sidebar li a:hover, .reader-suggest-sidebar .summary:hover, .reader-suggest-sidebar .details:hover, .vip a .title:hover, .parteners ul a:hover, .foot-public a:hover, .book .title:focus, .title-book .title:focus, .sidebar-book .title:focus, .sidebar-with-list .head:focus, .book-menu .body dd a:focus, .section-one-sidebar .dongtai li a:focus, .author-main-body .name:focus, .guess-foot-sidebar li a:focus, .reader-suggest-sidebar .summary:focus, .reader-suggest-sidebar .details:focus, .vip a .title:focus, .parteners ul a:focus, .foot-public a:focus {
   color: #ec7814;
 }
 
-.book-menu .outer dt a:hover {
+.book-menu .body dt a:hover {
   color: #ec7814;
 }
 
@@ -445,10 +445,6 @@ h3 {
   line-height: 18px;
 }
 
-.sidebar-book .pic {
-  width: 120px;
-  height: 120px;
-}
 .sidebar-book .pic img {
   width: 120px;
   height: 120px;
@@ -488,6 +484,10 @@ h3 {
 }
 .book .pic .hot {
   top: -6px;
+}
+.book .pic img {
+  width: 150px;
+  height: 150px;
 }
 .book .title, .book .star, .book .price, .book .author, .book .tegong {
   margin-left: 20px;
@@ -922,25 +922,71 @@ form input[type="button"] {
   background-position: -20px 0;
   background-repeat: repeat-y;
   border-top: 2px dotted #487a6f;
+  width: 190px;
+}
+.book-menu .body dt a {
+  margin-right: 10px;
+}
+.book-menu .body dd a {
+  background: url("../images/sidemenu_bg1.png") right center no-repeat;
+  padding-right: 4px;
+  margin-right: 3px;
 }
 .book-menu .outer {
   border-bottom: 1px dotted #487a6f;
   width: 170px;
-  margin: 0 9px;
+  margin-left: 8px;
+  margin-top: -1px;
 }
 .book-menu .outer dt {
   background-position: 160px 10px;
 }
-.book-menu .outer dt a {
-  margin-right: 10px;
-}
-.book-menu .outer dd a {
-  background: url("../images/sidemenu_bg1.png") right center no-repeat;
-  padding-right: 5px;
-  margin-right: 4px;
-}
 .book-menu .outer dd a.last {
   background-image: none;
+}
+.book-menu .outer.on {
+  border-top: 1px solid #487a6f;
+  border-bottom: 1px solid #487a6f;
+  border-left: 1px solid #487a6f;
+  margin-left: 0;
+  padding-left: 8px;
+  padding-right: 11px;
+}
+.book-menu .outer + div {
+  -webkit-box-shadow: -1px 1px 8px #bbbbbb;
+  -moz-box-shadow: -1px 1px 8px #bbbbbb;
+  box-shadow: -1px 1px 8px #bbbbbb;
+  border: 1px solid #487a6f;
+  left: 189px;
+  padding: 0 10px 10px 20px;
+  top: -1px;
+}
+.book-menu .outer + div .pic, .book-menu .outer + div .pic img {
+  height: 120px;
+  width: 500px;
+}
+.book-menu .outer + div .pic {
+  margin: 0 auto;
+}
+.book-menu .inner {
+  padding: 10px 0 10px 20px;
+  width: 590px;
+}
+.book-menu .inner dt {
+  margin-right: 20px;
+  text-align: right;
+  width: 80px;
+}
+.book-menu .inner dd {
+  padding-right: 20px;
+  width: 470px;
+}
+.book-menu .inner dd a {
+  padding-right: 9px;
+  margin-right: 8px;
+}
+.book-menu .inner.last {
+  border-bottom: none;
 }
 
 .section-one-main {
@@ -1250,12 +1296,14 @@ form input[type="button"] {
 }
 .vip img {
   width: 199px;
+  height: 178px;
 }
 .vip li.first {
   border-left: none;
 }
 .vip li.vip-book img {
   width: 120px;
+  height: 120px;
   margin: 10px auto;
 }
 .vip li.vip-book span {

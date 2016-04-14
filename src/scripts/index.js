@@ -1,19 +1,39 @@
 $(function() {
     // lazyload
-    (function() {
-        // 改变所有图片html结构
-        $(".space-pic img").each(function(index, el) {
-            var url = el.src.substring(22);
-                // width = $(el).outerWidth(),
-                // height = $(el).outerHeight();
-            $(el).attr("origin-data", url)
-                .removeAttr("src");
-                // .attr("width", width)
-                // .attr("height", height);
-            console.log(url);
-        }).addClass("lazy").lazyload()
 
+
+    (function() {
+        // 初始化需要lazyload的图片
+        // .slide中的图片如果延时加载本能正常显示，所以不延时
+        // 侧边栏的图片也不延时加载，原因，浮动定位，图片位置其实是在主体位置的下方
+        // 不能得到同步载入的效果
+        $(".dd-tegong, .zhubian-suggest, .guess, .author")
+            .find(".book img")
+            .add(".vip img")
+            .each(function(index, el) {
+                var image = $(el),
+                    width = image.outerWidth(),
+                    height = image.outerHeight(),
+                    url = image.attr("src");
+                image.removeAttr("src")
+                    .attr({ "data-original": url, width: width, height: height });
+            })
+            .lazyload({ effect: "fadeIn", threshold: 100 });
     })();
+
+    // 图书菜单栏目鼠标悬浮改变类
+    $("dl.outer").slice(0, -2).hover(function() {
+        $(this).addClass("on").siblings("div").addClass("current");
+    }, function() {
+        $(this).removeClass("on").siblings("div").removeClass("current");
+    });
+
+    $("dl.outer+div").hover(function() {
+        $(this).addClass("current").siblings("dl.outer").addClass("on");
+    }, function() {
+        $(this).removeClass("current").siblings("dl.outer").removeClass("on");
+    });
+
     // 顶部工具栏改变样式
     // alert(1);
     (function() {
@@ -101,6 +121,10 @@ $(function() {
 
 
     })();
+
+    // 新书上架无缝滚动
+    $(".section-one-main .books").slider({ width: 750, height: 540 });
+
     // 购物车和订单鼠标悬浮时更改类,以改变样式
     $(".cat, .order").hover(function() {
         $(this).addClass("on");
@@ -110,8 +134,7 @@ $(function() {
     // 最上方焦点图,自动播放
     $(".section-one-main .play-pics li")
         .tabshow(".section-one-main .play-pics .pic", { autoplay: true, interval: 3000 });
-    // 新书上架无缝滚动
-    $(".section-one-main .books").slider({ width: 750, height: 540 });
+
     // 新书预售无缝滚动
     $(".yushou .sidebar-book").slider({ width: 238, height: 120 });
 
@@ -148,25 +171,24 @@ $(function() {
     });
     // 当当特供鼠标悬浮,改变显示内容
     $(".dd-tegong-main .head li")
-        .tabshow(".dd-tegong-main .books")
-        // 侧边栏
+        .tabshow(".dd-tegong-main .books");
+    // 侧边栏
     $(".dd-tegong .sidebar-with-list .nav li")
-        .tabshow(".dd-tegong .sidebar-with-list .list")
+        .tabshow(".dd-tegong .sidebar-with-list .list");
 
     // 主编推荐鼠标悬浮,改变显示内容
     $(".zhubian-suggest-main .head li")
-        .tabshow(".zhubian-suggest-main .books")
-        // 作者推荐鼠标悬浮,改变显示内容
+        .tabshow(".zhubian-suggest-main .books");
+    // 作者推荐鼠标悬浮,改变显示内容
     $(".author-main-head li")
-        .tabshow(".author-main-body > div")
-        // 读者推荐导航,鼠标悬浮时更改样式
+        .tabshow(".author-main-body > div");
+    // 读者推荐导航,鼠标悬浮时更改样式
     $(".reader-suggest-main-head li")
-        .tabshow(".reader-suggest-main-body > div")
-        // 读者推荐栏目中的无缝滚动
+        .tabshow(".reader-suggest-main-body > div");
+    // 读者推荐栏目中的无缝滚动
     $.each([".haoping", ".guanzhu", ".shoucang"], function(index, val) {
         $(".reader-suggest-main-body " + val + " .books").slider({ width: 950, height: 289 });
     });
-
     // 合作伙伴展示区上下来回滚动,进行动画时绝对定位,减小性能消耗
     (function() {
         // 可见内容高度和宽度

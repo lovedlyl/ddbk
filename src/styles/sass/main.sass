@@ -595,60 +595,118 @@ form
 
 	.body
 		@extend %sidemenu-bg2
-
+		// 定位隐藏元素
+		@extend %relative
 		background-position: (-20px) 0
 		background-repeat: repeat-y
 		border-top: 2px dotted $theme-greencolor
-
+		width: 190px
+		// +border
 		// 为啥不直接用左右边框???
 		// border-left: 1px solid $theme-greencolor
 		// border-right: 1px solid $theme-greencolor
+		dt a
+			@extend %font-size-14px
+			@extend %bold-font-weight
+			@extend %green-font-color
+			@extend %line-height-24px
+			margin-right: 10px
+			&:hover
+				@extend %yellow-link-color
+		dd	a
+			@extend %float-left
+			@extend %yellow-hover-link
+			@extend %line-height-24px
+			background: url("../images/sidemenu_bg1.png") right center no-repeat
+			// 同时设置右内外边距,使背景图片看起来刚好在元素中间
+			padding-right: 4px
+			margin-right: 3px
 
 	// 外层可见dl dt dd 描述内容
 	.outer
+		// +border
+		// 为了将上边框上移1px，相对定位
+		@extend %relative
+		@extend %high-z-index
+		
 		border-bottom: 1px dotted $theme-greencolor
-
+		// border-top: 0px solid $theme-greencolor
+		// top: -1px
 		// 声明宽度和左右外边距,刚好等于整个菜单的宽度
 		width: 170px
-		margin: 0 (($menu-width - 170px - 2px) / 2)
-
+		margin-left: 8px
+		margin-top: -1px
+		
+		// +border
 		dt
 			// +border
 			@extend %line-height-30px
-
 			@extend %sidemenu-bg2
-
 			background-position: 160px 10px
-
-			a
-				@extend %font-size-14px
-
-				@extend %bold-font-weight
-
-				@extend %green-font-color
-
-				margin-right: 10px
-
-				&:hover
-					@extend %yellow-link-color
-
 		dd
-			// +border
-			a
-				@extend %float-left
-
-				@extend %yellow-hover-link
-
-				@extend %line-height-24px
-
-				background: url("../images/sidemenu_bg1.png") right center no-repeat
-
-				// 同时设置右内外边距,使背景图片看起来刚好在元素中间
-				padding-right: 5px
-				margin-right: 4px
-
 			a.last
 				background-image: none
+	// 鼠标悬浮时的样式
+	.outer.on 
+		@extend %white-background
+		border-top: 1px solid $theme-greencolor
+		border-bottom: 1px solid $theme-greencolor
+		border-left: 1px solid $theme-greencolor
+
+		// margin: -1px 0
+		
+
+		margin-left: 0
+		padding-left: 8px
+		padding-right: 11px
+	// 隐藏的div
+	.outer + div.current
+		@extend %show-element
+	.outer + div 
+		+box-shadow(-1px 1px 8px #bbb)
+		// box-shadow: -1px 1px 8px #bbb
+		// width: 100px
+		@extend %hide-element
+		@extend %absolute
+		@extend %low-z-index
+		@extend %white-background
+		border: 1px solid $theme-greencolor
+		// border-left: none
+		left: 189px
+		padding: 0 10px 10px 20px
+		top: -1px
+		.pic, .pic img 
+			height: 120px
+			width: 500px
+		.pic
+			@extend %show-element
+			margin: 0 auto
+
+	// 内部dl元素
+	.inner 
+		// +border
+		@extend %dotted-gray-bottom
+		padding: 10px 0 10px 20px
+		dt, dd 
+			@extend %float-left
+		width: 80px + 20px + 470px + 20px
+		dt 
+			// +border
+			margin-right: 20px
+			text-align: right
+			width: 80px
+		dd 
+			// +border
+			padding-right: 20px
+			width: 470px
+			a 
+				padding-right: 9px
+				margin-right: 8px
+	.inner.last 
+		border-bottom: none
+
+
+
 
 // 主体部分
 .section-one-main
@@ -1404,6 +1462,7 @@ form
 
 	img
 		width: 199px
+		height: 178px
 
 	// 每行最左边的元素没有左边框
 	li.first
@@ -1418,6 +1477,7 @@ form
 
 		img
 			width: 120px
+			height: 120px
 
 			// 块级显示,以便居中
 			@extend %show-element

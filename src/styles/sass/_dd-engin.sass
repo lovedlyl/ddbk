@@ -315,13 +315,14 @@ h3
 .sidebar-book
 	// +border
 	$img-width: 120px
+	$img-height: 120px
 	.pic
-		width: $img-width
-		height: $img-width
-
+		// width: $img-width
+		// height: $img-height
+		// 显式设置尺寸，为lazyload提前获得宽高
 		img
 			width: $img-width
-			height: $img-width
+			height: $img-height
 
 	// 微调背景图片位置
 	.pic .hot
@@ -384,6 +385,7 @@ h3
 .book
 	// 每个图书展示所占宽度
 	$book-width: 150px
+	$book-height: 150px
 
 	// 没列多少本图书
 	$books-each-row: 5
@@ -408,8 +410,14 @@ h3
 	// 每个展示区域宽度,刚号好是图书图片的宽度
 	width: $book-width
 
-	.pic .hot
-		top: -6px
+	.pic 
+		.hot
+			top: -6px
+		// 为了使用lazyload在加载前获得图片宽度和高度，在此设置
+		img 
+			width: $book-width
+			height: $book-height
+
 
 	// 标题 星星 价格都左右padding,以便与图书左下角对其,并且为块级显示
 	.title, .star
