@@ -93,6 +93,10 @@
 %margin-top-20px
 	margin-top: 20px
 
+// 图书导航栏和页尾在手机上显示不正确，加上min-width后稍微好些
+%min-width-1200px
+	+min-width(1200px)
+
 // 鼠标悬浮时,红色字体,有下滑线和没有下划线
 %red-hover-link
 	+underline-link($theme-redcolor)

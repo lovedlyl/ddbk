@@ -460,11 +460,13 @@ form
 
 // 顶部导航
 // 全部商品导航
+
+
 .all-nav
-	// +border
 	// height: 40px
 	// @extend %hide-overflow
 	// margin-top: 40px
+	// +border
 	@extend %center-in-page
 
 	.menu, ul
@@ -534,26 +536,28 @@ form
 .book-nav
 	// +border
 	// 其它地方的背景灰色比这要淡些
+	@extend %min-width-1200px
+	@extend %line-height-32px
 	background-color: #f5f5f5
 	border-top: 3px solid $theme-redcolor
-
 	ul
-		// +border
+		// +border(yellow)
 		// 外层设置一个div元素,让其背景色填满整行,不管浏览器多宽
 		@extend %center-in-page
+		@extend %hide-overflow
+		
+		// margin-left: -10px
 
 	li
 		// +border
 		@extend %float-left
-
 		@extend %line-height-32px
-
 		background: url("../images/sub_line_bg.png") right center no-repeat
 		padding: 0 15px
+		margin-left: -2px
 
 		a
 			@extend %red-hover-link
-
 			color: $nav-ftcolor
 
 // 顶部导航结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1516,7 +1520,7 @@ $parteners-public-padding-left: 16px
 // 页尾 所有文本都采用居中形式
 .foot
 	@extend %text-align-center
-
+	@extend %min-width-1200px
 	margin-bottom: 50px
 
 // 图片栏

@@ -9,6 +9,8 @@ var imageMin = require("gulp-imagemin");
 var minifyCss = require("gulp-clean-css");
 var compass = require("gulp-compass");
 var htmlMin = require("gulp-htmlmin");
+var rename = require("gulp-rename");
+var concat = require("gulp-concat");
 
 // // 测试提取需要的包
 // var domSrc = require("gulp-dom-src");
@@ -69,15 +71,28 @@ gulp.task("styles", function() {
 
 // 引入jquery
 gulp.task("venderJquery", function() {
-    gulp.src("bower_components/jquery/dist/jquery.min.js")
-        .pipe(rename("jquery.min.js"))
+    gulp.src(["bower_components/jquery-1.12.3.min/index.js",
+        "bower_components/jquery_lazyload/jquery.lazyload.js"
+        ])
+        .pipe(concat("jquery.js"))
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest("src/scripts"))
         .pipe(gulp.dest("../lovedlyl.github.io/dangdang/scripts"))
 })
 
+gulp.task("lazyload", function() {
+    gulp.src(["bower_components/jquery_lazyload/jquery.lazyload.js"
+        ])
+        .pipe(gulp.dest("src/scripts"))
+        .pipe(gulp.dest("../lovedlyl.github.io/dangdang/scripts"))
+})
+
+
 gulp.task("default", function() {
     browserSync.init({
-        server: "src"
+        server: "../lovedlyl.github.io/dangdang"
     });
     gulp.watch("src/styles/sass/*.sass", ["styles"]);
     gulp.watch("src/styles/config.rb", ["styles"]);

@@ -1,6 +1,21 @@
 $(function() {
+    // lazyload
+    (function() {
+        // 改变所有图片html结构
+        $(".space-pic img").each(function(index, el) {
+            var url = el.src.substring(22);
+                // width = $(el).outerWidth(),
+                // height = $(el).outerHeight();
+            $(el).attr("origin-data", url)
+                .removeAttr("src");
+                // .attr("width", width)
+                // .attr("height", height);
+            console.log(url);
+        }).addClass("lazy").lazyload()
+
+    })();
     // 顶部工具栏改变样式
-    alert(1);
+    // alert(1);
     (function() {
         var area = $(".area"),
             head = $(".area .head"),
@@ -30,7 +45,7 @@ $(function() {
         // // 后面的工具栏目
         var heads = $(".service, .company, .my").find(">a"),
             lists = heads.siblings('ul');
-        console.log(heads)
+        // console.log(heads)
 
         heads.hover(function() {
             $(this).addClass("on").siblings('ul').addClass("on")

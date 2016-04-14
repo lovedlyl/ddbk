@@ -30,7 +30,7 @@ h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .re
   font-size: 16px;
 }
 
-.book-nav li {
+.book-nav, .book-nav li {
   line-height: 32px;
 }
 
@@ -53,7 +53,7 @@ h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .sli
   overflow: hidden;
 }
 
-.book .title, .sidebar-book .title, .title-book .summary, .sidebar-with-list .list li > a, .author-main-body .horizontal-author .intro, .author-main-body .author-vertical .intro, .vip li, .vip li.vip-book {
+.book .title, .sidebar-book .title, .title-book .summary, .sidebar-with-list .list li > a, .book-nav ul, .author-main-body .horizontal-author .intro, .author-main-body .author-vertical .intro, .vip li, .vip li.vip-book {
   overflow: hidden;
 }
 
@@ -141,7 +141,7 @@ h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .re
   font-size: 16px;
 }
 
-.book-nav li {
+.book-nav, .book-nav li {
   line-height: 32px;
 }
 
@@ -164,7 +164,7 @@ h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .sli
   overflow: hidden;
 }
 
-.book .title, .sidebar-book .title, .title-book .summary, .sidebar-with-list .list li > a, .author-main-body .horizontal-author .intro, .author-main-body .author-vertical .intro, .vip li, .vip li.vip-book {
+.book .title, .sidebar-book .title, .title-book .summary, .sidebar-with-list .list li > a, .book-nav ul, .author-main-body .horizontal-author .intro, .author-main-body .author-vertical .intro, .vip li, .vip li.vip-book {
   overflow: hidden;
 }
 
@@ -308,6 +308,12 @@ form input[type="text"], form input[type="button"] {
 
 .zhubian-suggest-main .head, .dd-tegong-main .head, .guess-head, .reader-suggest-main-head, .logo-line .search, .logo-line .cat, .logo-line .order, .dd-tegong + .space-pics, .author, .author-main-body .books .price, .author + .space-pics, .foot-copywrite {
   margin-top: 20px;
+}
+
+.book-nav, .foot {
+  min-width: 1200px;
+  width: auto !important;
+  width: 1200px;
 }
 
 .search-foot a:hover, .book-nav li a:hover, .search-foot a:focus, .book-nav li a:focus {
@@ -890,6 +896,7 @@ form input[type="button"] {
 .book-nav li {
   background: url("../images/sub_line_bg.png") right center no-repeat;
   padding: 0 15px;
+  margin-left: -2px;
 }
 .book-nav li a {
   color: #646464;
