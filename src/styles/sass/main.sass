@@ -606,7 +606,7 @@ form
 		// border-left: 1px solid $theme-greencolor
 		// border-right: 1px solid $theme-greencolor
 		dt a
-			@extend %font-size-14px
+			@extend %font-size-12px
 			@extend %bold-font-weight
 			@extend %green-font-color
 			@extend %line-height-24px
@@ -621,6 +621,7 @@ form
 			// 同时设置右内外边距,使背景图片看起来刚好在元素中间
 			padding-right: 4px
 			margin-right: 3px
+			white-space: nowrap
 
 	// 外层可见dl dt dd 描述内容
 	.outer
@@ -630,23 +631,33 @@ form
 		@extend %high-z-index
 		
 		border-bottom: 1px dotted $theme-greencolor
+		// border-top: 1px solid #fff
 		// border-top: 0px solid $theme-greencolor
 		// top: -1px
 		// 声明宽度和左右外边距,刚好等于整个菜单的宽度
 		width: 170px
+		padding-top: 2px
 		margin-left: 8px
+		// padding-right: 11px
 		margin-top: -1px
+
 		
 		// +border
 		dt
 			// +border
+			border-bottom: 1px solid #fff
 			@extend %line-height-30px
 			@extend %sidemenu-bg2
 			background-position: 160px 10px
+			a 
+				@extend %font-size-14px
 		dd
 			a.last
 				background-image: none
 	// 鼠标悬浮时的样式
+	// 左上都增加了边框，所以开始上面加padding 2px, 鼠标悬浮时改为1px
+	// 开始左margin 8px, 加上padding后，左padding7px
+	// 右padding 12px -->1px + 7px + 170px + 12px = 190px
 	.outer.on 
 		@extend %white-background
 		border-top: 1px solid $theme-greencolor
@@ -657,8 +668,12 @@ form
 		
 
 		margin-left: 0
-		padding-left: 8px
-		padding-right: 11px
+		// margin-top: -1px
+		padding-left: 7px
+		padding-right: 12px
+		padding-top: 1px
+		// dt 
+		// 	border-bottom: none
 	// 隐藏的div
 	.outer + div.current
 		@extend %show-element

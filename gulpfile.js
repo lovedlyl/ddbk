@@ -92,7 +92,7 @@ gulp.task("lazyload", function() {
 
 gulp.task("default", function() {
     browserSync.init({
-        server: "../lovedlyl.github.io/dangdang"
+        server: "src"
     });
     gulp.watch("src/styles/sass/*.sass", ["styles"]);
     gulp.watch("src/styles/config.rb", ["styles"]);

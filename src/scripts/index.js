@@ -24,6 +24,49 @@ $(function() {
     // 图书菜单栏目鼠标悬浮改变类
     $("dl.outer").slice(0, -2).hover(function() {
         $(this).addClass("on").siblings("div").addClass("current");
+        var menu = $(".book-menu .body"),
+            outer = $(this),
+            box = outer.siblings("div"),
+            // 外层元素距父元素顶部的距离
+            outerTop = outer.position().top,
+            // 外层元素高度
+            outerHeight = outer.outerHeight(true),
+            // 内层元素的高度
+            boxHeight = box.outerHeight(true),
+            // 整个菜单由于滚动隐藏的高度
+            deltaY = $(window).scrollTop() - menu.offset().top,
+            // 外层被隐藏的高度
+            outerDeltaY = deltaY - outerTop,
+            // 内层高度是否足以显示,外层相对可视顶部高度+自身高度 与盒子的高度差
+            deltaHeight = outerHeight + outerTop - boxHeight;
+            // 如果菜单部分被隐藏，并且box高度不够,计算top值时要减去隐藏的高度
+            if(deltaY > 0){
+                deltaHeight -= deltaY;
+            }
+        // 最后设置的top值得
+        var top = -1;
+
+        console.log(deltaHeight, deltaY);
+
+        // 如果由于滚动隐藏box, 
+        if (deltaY > 0) {
+            top = deltaY - 1;
+            // 如果外层元素也被隐藏，向上提升这个距离
+            if (outerDeltaY > 0) {
+                top -= outerDeltaY;
+            }
+        }
+
+        // 如果元素高度不及
+        // 判断内层DIV的底部是否高过内层dl的底部
+        // 如果是，使内层div的底部刚好与外层底部对齐
+        // innerHeight + top(?) = offsettop + outerHeight 
+        if (deltaHeight > 0) {
+            top += deltaHeight + 1;
+        }
+
+        box.css("top", top);
+
     }, function() {
         $(this).removeClass("on").siblings("div").removeClass("current");
     });

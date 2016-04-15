@@ -14,11 +14,15 @@ h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .re
   float: right;
 }
 
+.book-menu .body dt a {
+  font-size: 12px;
+}
+
 .book .author, .book .tegong, .title-book .summary, .sidebar-with-list .nav li, .area .body a, .select li, .book-menu .body dt a, .book-menu .body dd a, .section-one-sidebar .dongtai li, .author-main-body .horizontal-author .intro, .author-main-body .horizontal-author .icon, .author-main-body .author-vertical .intro, .guess-foot-sidebar h1, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .foot-public li, .backtop .diaoyan {
   line-height: 24px;
 }
 
-.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .body dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
+.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .outer dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
   font-size: 14px;
 }
 
@@ -125,11 +129,15 @@ h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .re
   float: right;
 }
 
+.book-menu .body dt a {
+  font-size: 12px;
+}
+
 .book .author, .book .tegong, .title-book .summary, .sidebar-with-list .nav li, .area .body a, .select li, .book-menu .body dt a, .book-menu .body dd a, .section-one-sidebar .dongtai li, .author-main-body .horizontal-author .intro, .author-main-body .horizontal-author .icon, .author-main-body .author-vertical .intro, .guess-foot-sidebar h1, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .details, .foot-public li, .backtop .diaoyan {
   line-height: 24px;
 }
 
-.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .body dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
+.zhubian-suggest-main .head li, .dd-tegong-main .head li, .reader-suggest-main-head li, .book .price, .title-book .price, .sidebar-book .price, .title-book .title, .order, .cat.on, .cat i, .cat b, .all-nav .menu .head, .all-nav li a, .book-menu .outer dt a, .section-one-main .play-pics li, .author-main-body .horizontal-author .icon, .author-main-body .works dl dt, .author-main-body .works dl dd, .guess-head a, .reader-suggest-sidebar .summary, .reader-suggest-sidebar .btns a {
   font-size: 14px;
 }
 
@@ -931,14 +939,17 @@ form input[type="button"] {
   background: url("../images/sidemenu_bg1.png") right center no-repeat;
   padding-right: 4px;
   margin-right: 3px;
+  white-space: nowrap;
 }
 .book-menu .outer {
   border-bottom: 1px dotted #487a6f;
   width: 170px;
+  padding-top: 2px;
   margin-left: 8px;
   margin-top: -1px;
 }
 .book-menu .outer dt {
+  border-bottom: 1px solid white;
   background-position: 160px 10px;
 }
 .book-menu .outer dd a.last {
@@ -949,8 +960,9 @@ form input[type="button"] {
   border-bottom: 1px solid #487a6f;
   border-left: 1px solid #487a6f;
   margin-left: 0;
-  padding-left: 8px;
-  padding-right: 11px;
+  padding-left: 7px;
+  padding-right: 12px;
+  padding-top: 1px;
 }
 .book-menu .outer + div {
   -webkit-box-shadow: -1px 1px 8px #bbbbbb;
