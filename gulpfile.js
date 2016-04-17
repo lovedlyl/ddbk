@@ -25,7 +25,7 @@ var concat = require("gulp-concat");
 // 压缩HTML文件
 gulp.task("html", function() {
     gulp.src("src/*.html")
-        .pipe(htmlMin({ collapseWhitespace: true }))
+        .pipe(htmlMin({ collapseWhitespace: true, removeComments: true }))
         .pipe(gulp.dest("../lovedlyl.github.io/dangdang"))
         .pipe(stream())
 })
@@ -92,7 +92,7 @@ gulp.task("lazyload", function() {
 
 gulp.task("default", function() {
     browserSync.init({
-        server: "src"
+        server: "../lovedlyl.github.io/dangdang"
     });
     gulp.watch("src/styles/sass/*.sass", ["styles"]);
     gulp.watch("src/styles/config.rb", ["styles"]);

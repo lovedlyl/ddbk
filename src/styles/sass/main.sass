@@ -469,13 +469,14 @@ form
 	// +border
 	@extend %center-in-page
 
-	.menu, ul
+	.menu, .menu > ul
 		@extend %float-left
 
 		height: 40px
 
 	// 菜单大块
 	.menu
+		@extend %relative
 		.head
 			// +border
 			@extend %font-size-14px
@@ -492,45 +493,177 @@ form
 
 			@extend %head-sprite
 
-			background-position: 160px -566px
+			background-position: 170px -566px
 
 			// 右边多些间隙放背景图片
-			padding: 0 60px 0 20px
+			padding: 0 70px 0 20px
 
+		
 		.body
-			@extend %hide-element
+			// +border
+			@extend %absolute
+			@extend %low-z-index
+			border-top: 3px solid $theme-redcolor
+			top: 40px 
+			left: 0
+			width: 100%
+			// @extend %high-z-index-plus
+			z-index: 1000
+			> ul
+				// +border
+				@extend %hide-element
+				@extend %gray-background
+				border-top: 3px solid #ccc
 
+				li 
+					border-top: 2px solid $nav-bgcolor
+					border-left: 2px solid $nav-bgcolor
+					border-bottom: 2px solid $nav-bgcolor
+					padding-left: 20px
+					a 
+						@extend %font-size-14px
+						@extend %black-font-color					
+						line-height: 34px
+						&:hover 
+							@extend %underline
+				li.on
+					@extend %white-background
+					@extend %relative
+					@extend %high-z-index
+					border-top-color: $theme-redcolor
+					border-bottom-color: $theme-redcolor
+					border-left-color: $theme-redcolor
+					margin-top: -2px
+					// 逗号的颜色也是红色 
+					color: $theme-redcolor
+					a 
+						color: $theme-redcolor
+						font-size: 16px
+		.content.current 
+			@extend %show-element
+		.content
+			+min-height(530px)
+			@extend %hide-element
+			@extend %absolute
+			@extend %white-background
+			border-right: 2px solid $theme-redcolor
+			border-bottom: 2px solid $theme-redcolor
+			border-left: 2px solid $theme-redcolor
+			left: 200px 
+			top: 0
+			padding-left: 20px
+			padding-top: 20px
+			padding-right: 20px
+			// +border
+	.guan 
+		padding-bottom: 10px
+		// +border
+		a 
+			@extend %white-font-color
+			background: #a2a2a2 url(../images/home_sprite_1511.png) right -146px no-repeat
+			padding: 2px 28px 2px 8px
+			margin-right: 4px
+			&:hover 
+				background-color: $theme-redcolor
+				background-position: right -166px
+	.category.bang 
+		h4 a 
+			@extend %font-size-14px
+		.goods li 
+			background-image: none
+			a 
+				@extend %yellow-hover-link
+	.category.last >div
+		border-bottom: none
+	.category
+		margin-top: 10px
+
+		h4 
+			// @extend %float-left
+			a 
+				@extend %red-font-color
+				@extend %bold-font-weight
+				@extend %line-height-24px
+				&:hover 
+					@extend %underline
+		> div 
+			// @extend %float-left
+			// +border
+			// @extend %dotted-gray-bottom
+			border-bottom: 1px dotted #d5d5d5
+			padding-bottom: 14px
+			margin-top: -24px
+			margin-left: 12px * 6
+			// margin-right: 10px
+		li 
+			background: url("../images/sidemenu_bg1.png") right center no-repeat
+			padding-right: 9px 
+			margin-right: 8px
+			a 
+				@extend %light-black-font-color
+				@extend %red-hover-link
+				@extend %line-height-24px
+		li.light a 
+			@extend %red-font-color
+	.goods, .pinpai 
+		margin-left: 10px
+	.goods 
+		// +border
+		// margin-bottom: 20px
+		width: 900px
+		li
+			@extend %float-left
+	.pinpai 
+		// +border 
+		width: 900px
+		// >span, > ul
+		// 	@extend %float-left
+		margin-top: 14px
+		>span
+			// @extend %show-element
+			@extend %line-height-24px
+			@extend %white-font-color
+			// @extend %text-align-center
+			background-color: #bfbfbf
+			padding: 2px 6px		
+			// padding: 0 (24px / 4)
+			// width: 12px * 3
+
+		> ul 
+			// +border(yellow)
+			margin-top: -24px
+			margin-left: 24px * 2
+			li 
+				@extend %float-left
+		 
+
+
+
+.all-nav
 	// 导航部分
-	ul
+	.nav
 		// +border
 		margin-left: 20px
+	
+		li
+			@extend %float-left
+			@extend %line-height-40px
+			// margin-left: 20px
+			padding: 0 15px
+			a
+				@extend %font-size-14px
+				@extend %black-font-color
+				@extend %bold-font-weight
+				@extend %red-hover-link-without-underline
+		// 小黄图标的定位
+		li.hot
+			@extend %relative
+			img
+				@extend %absolute
+				left: 8px
+				top: -6px
 
-	li
-		@extend %float-left
 
-		@extend %line-height-40px
-
-		// margin-left: 20px
-		padding: 0 15px
-
-		a
-			@extend %font-size-14px
-
-			@extend %black-font-color
-
-			@extend %bold-font-weight
-
-			@extend %red-hover-link-without-underline
-
-	// 小黄图标的定位
-	li.hot
-		@extend %relative
-
-		img
-			@extend %absolute
-
-			left: 8px
-			top: -6px
 
 // 图书导航
 .book-nav
@@ -663,6 +796,7 @@ form
 		border-top: 1px solid $theme-greencolor
 		border-bottom: 1px solid $theme-greencolor
 		border-left: 1px solid $theme-greencolor
+		border-right: 1px solid #fff
 
 		// margin: -1px 0
 		
@@ -670,7 +804,7 @@ form
 		margin-left: 0
 		// margin-top: -1px
 		padding-left: 7px
-		padding-right: 12px
+		padding-right: 11px
 		padding-top: 1px
 		// dt 
 		// 	border-bottom: none

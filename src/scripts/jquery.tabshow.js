@@ -27,6 +27,7 @@ jQuery.fn.tabshow = function(selector, options) {
         currentIndex = 0;
     var timer;
 
+    // console.log(target)
     function go(step) {
         // console.log("go...")
         that.eq(currentIndex).removeClass('on');

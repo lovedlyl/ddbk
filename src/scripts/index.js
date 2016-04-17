@@ -21,6 +21,65 @@ $(function() {
             .lazyload({ effect: "fadeIn", threshold: 100 });
     })();
 
+
+
+
+    // 全部商品分类菜单鼠标悬浮样式变化
+    (function() {
+        var menu = $(".menu"),
+            head = menu.find(".head"),
+            body = menu.find(".body"),
+            list = $(".menu .body > ul"),
+            items = list.find("li");
+        // 全部商品详细分类采用ajax条件加载,
+        // 即头部鼠标悬浮时才加载
+        head.one('mouseover', function(event) {
+            // console.log("loading")
+            $.ajax({
+                    url: 'category.html',
+                    // type: 'default GET (Other values: POST)',
+                    dataType: 'html',
+
+                })
+                .done(success);
+        });
+
+
+        head.hover(function() {
+            list.show();
+        }, function() {
+            list.hide();
+        });
+
+
+        // console.log(body)
+        function success(html) {
+            // 载入内容
+            var div = document.createElement("div");
+            div.innerHTML = html;
+            $(div).find(".content").appendTo('.menu .body');
+
+            var contents = body.find(".content");
+            items.tabshow(contents);
+            // console.log(contents)
+
+            // 添加事件
+
+            body.hover(function() {
+                list.show();
+                // console.log(1)
+            }, function() {
+                list.slideUp();
+                contents.removeClass('current');
+                items.removeClass('on');
+            });
+
+        }
+
+    })();
+
+
+
     // 图书菜单栏目鼠标悬浮改变类
     $("dl.outer").slice(0, -2).hover(function() {
         $(this).addClass("on").siblings("div").addClass("current");
@@ -39,14 +98,14 @@ $(function() {
             outerDeltaY = deltaY - outerTop,
             // 内层高度是否足以显示,外层相对可视顶部高度+自身高度 与盒子的高度差
             deltaHeight = outerHeight + outerTop - boxHeight;
-            // 如果菜单部分被隐藏，并且box高度不够,计算top值时要减去隐藏的高度
-            if(deltaY > 0){
-                deltaHeight -= deltaY;
-            }
+        // 如果菜单部分被隐藏，并且box高度不够,计算top值时要减去隐藏的高度
+        if (deltaY > 0) {
+            deltaHeight -= deltaY;
+        }
         // 最后设置的top值得
         var top = -1;
 
-        console.log(deltaHeight, deltaY);
+        // console.log(deltaHeight, deltaY);
 
         // 如果由于滚动隐藏box, 
         if (deltaY > 0) {
