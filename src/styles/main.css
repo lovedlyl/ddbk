@@ -1,4 +1,4 @@
-h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav .menu .body, .all-nav .menu .content, .all-nav .nav li.hot img, .book-menu .outer + div, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
+h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .book .pic .busy, .title-book .pic .busy, .sidebar-book .pic .busy, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav .menu .body, .all-nav .menu .content, .all-nav .nav li.hot img, .book-menu .outer + div, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
   position: absolute;
 }
 
@@ -47,11 +47,11 @@ form input[type="text"], form .select > span, .order, .cat.on, .book-menu .head,
   height: 36px;
 }
 
-.sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body > ul, .all-nav .menu .content, .book-menu .outer + div, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
+.book .pic .busy p, .title-book .pic .busy p, .sidebar-book .pic .busy p, .sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body > ul, .all-nav .menu .content, .book-menu .outer + div, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
   display: none;
 }
 
-h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns li, .logo, .section-one-main .head, .reader-suggest-sidebar .community, .foot-pic > a, .backtop .erweima .small, .backtop .back {
+h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns li, .section-one-main .head, .reader-suggest-sidebar .community, .foot-pic > a, .backtop .erweima .small, .backtop .back {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
@@ -101,7 +101,7 @@ form input[type="text"], form input[type="button"] {
   position: relative;
 }
 
-.book .pic, .title-book .pic, .sidebar-book .pic, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .all-nav .menu .content.current, .book-menu .outer + div.current, .book-menu .outer + div .pic, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
+.book .pic, .title-book .pic, .sidebar-book .pic, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .all-nav .menu .content.current, .book-menu .outer + div.current, .book-menu .outer + div .pic, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
   display: block;
 }
 
@@ -113,7 +113,7 @@ form input[type="text"], form input[type="button"] {
   text-align: left;
 }
 
-h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav .menu .body, .all-nav .menu .content, .all-nav .nav li.hot img, .book-menu .outer + div, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
+h3, .guess-head a, .zhubian-suggest-main .head ul, .dd-tegong-main .head ul, .reader-suggest-main-head ul, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .book .pic .busy, .title-book .pic .busy, .sidebar-book .pic .busy, .slide .slide-prev, .slide .slide-next, .slide .slide-btns, .num, .area .body, .service ul, .company ul, .my ul, .phone i, .phone > div, .select ul, .all-nav .menu .body, .all-nav .menu .content, .all-nav .nav li.hot img, .book-menu .outer + div, .section-one-main .play-pics ul, .section-one-sidebar .yushou .more, .author-main-body .horizontal-author .icon, .vip li.vip-book span, .parteners img, .foot-nav .hot-search > div, .foot-nav .hot-search > div > i, .backtop .erweima .big {
   position: absolute;
 }
 
@@ -162,11 +162,11 @@ form input[type="text"], form .select > span, .order, .cat.on, .book-menu .head,
   height: 36px;
 }
 
-.sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body > ul, .all-nav .menu .content, .book-menu .outer + div, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
+.book .pic .busy p, .title-book .pic .busy p, .sidebar-book .pic .busy p, .sidebar-with-list .list, .sidebar-with-list .list li .sidebar-book, .sidebar-with-list .list li.on > a, .area .body, .service ul, .company ul, .my ul, .phone > div, .select ul, .all-nav .menu .body > ul, .all-nav .menu .content, .book-menu .outer + div, .section-one-main .play-pics .pic, .zhubian-suggest-main .books, .dd-tegong-main .books, .author-main-body > div, .guess-foot-main > div, .reader-suggest-main-body > div, .foot-nav .hot-search > div, .backtop .erweima .big {
   display: none;
 }
 
-h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns li, .logo, .section-one-main .head, .reader-suggest-sidebar .community, .foot-pic > a, .backtop .erweima .small, .backtop .back {
+h3, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .slide .slide-prev, .slide .slide-next, .slide .slide-btns li, .section-one-main .head, .reader-suggest-sidebar .community, .foot-pic > a, .backtop .erweima .small, .backtop .back {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
@@ -216,7 +216,7 @@ form input[type="text"], form input[type="button"] {
   position: relative;
 }
 
-.book .pic, .title-book .pic, .sidebar-book .pic, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .all-nav .menu .content.current, .book-menu .outer + div.current, .book-menu .outer + div .pic, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
+.book .pic, .title-book .pic, .sidebar-book .pic, .book .pic .hot, .title-book .pic .hot, .sidebar-book .pic .hot, .book .title, .title-book .title, .sidebar-book .title, .sidebar-book .price .new, .sidebar-book .price .old, .book .star, .title-book .star, .book, .book .tegong, .sidebar-with-list .head, .sidebar-with-list .list.current, .sidebar-with-list .list li > a, .sidebar-with-list .list li.on .sidebar-book, .sidebar-with-list .more, .space-pic, .area .head, .service > a, .company > a, .my > a, .area .body.on, .service ul.on, .company ul.on, .my ul.on, .service li a, .company li a, .my li a, .phone i, .phone > a, .phone > div.on, .phone > div a img, .phone > div span, .newyork > a, .self a, .select > span, .select li a, .select ul.on, .all-nav .menu .content.current, .book-menu .outer + div.current, .book-menu .outer + div .pic, .section-one-main .play-pics .pic.current, .zhubian-suggest-main .books.current, .dd-tegong-main .books.current, .author-main-body .name, .author-main-body > div.current, .author-main-body .horizontal-author .name, .author-sidebar a, .guess-head a, .guess-foot-main .current, .reader-suggest-main-body > div.current, .reader-suggest-sidebar a, .reader-suggest-sidebar img, .vip li.vip-book img, .backtop a, .backtop .erweima .small:hover + .big {
   display: block;
 }
 
@@ -434,6 +434,10 @@ h3 {
   top: 0;
   right: 0;
 }
+.book .pic .busy, .title-book .pic .busy, .sidebar-book .pic .busy {
+  top: 0;
+  right: 0;
+}
 .book .pic.qiang .hot, .title-book .pic.qiang .hot, .sidebar-book .pic.qiang .hot {
   background-image: url(../images/xsq.png);
 }
@@ -453,6 +457,10 @@ h3 {
   line-height: 18px;
 }
 
+.sidebar-book .pic {
+  width: 120px;
+  height: 120px;
+}
 .sidebar-book .pic img {
   width: 120px;
   height: 120px;
@@ -781,9 +789,9 @@ h3 {
 }
 
 .logo {
-  background: url(../images/DDlogoNEW.gif) 50% 50% no-repeat;
-  width: 342px;
-  height: 77px;
+  margin-right: 20px;
+  width: 323px;
+  height: 100px;
 }
 
 form input[type="text"], form .select > span {

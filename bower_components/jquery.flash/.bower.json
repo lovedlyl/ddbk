@@ -1,0 +1,15 @@
+{
+  "name": "jquery.flash",
+  "_cacheHeaders": {
+    "ETag": "\"2146-431404b5e93c0\"",
+    "Last-Modified": "Fri, 25 May 2007 00:15:19 GMT",
+    "Content-Length": "3103",
+    "Content-Type": "application/javascript"
+  },
+  "_release": "e-tag:2146-4314",
+  "main": "index.js",
+  "_source": "http://jquery.lukelutman.com/plugins/flash/jquery.flash.js",
+  "_target": "*",
+  "_originalSource": "http://jquery.lukelutman.com/plugins/flash/jquery.flash.js",
+  "_direct": true
+}

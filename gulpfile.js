@@ -72,7 +72,8 @@ gulp.task("styles", function() {
 // 引入jquery
 gulp.task("venderJquery", function() {
     gulp.src(["bower_components/jquery-1.12.3.min/index.js",
-        "bower_components/jquery_lazyload/jquery.lazyload.js"
+        "bower_components/jquery_lazyload/jquery.lazyload.js",
+        "bower_components/jquery.flash/index.js"
         ])
         .pipe(concat("jquery.js"))
         .pipe(sourcemaps.init())
@@ -92,6 +93,7 @@ gulp.task("lazyload", function() {
 
 gulp.task("default", function() {
     browserSync.init({
+        // server: "src"
         server: "../lovedlyl.github.io/dangdang"
     });
     gulp.watch("src/styles/sass/*.sass", ["styles"]);

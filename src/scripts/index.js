@@ -1,5 +1,15 @@
 $(function() {
     // lazyload
+    // 添加flash播放
+    (function() {
+        $('.busy').flash({
+            src: 'images/12001020.swf',
+            width: 52,
+            height: 52,
+            update: false,
+            expressInstall: false
+        });
+    })();
 
 
     (function() {

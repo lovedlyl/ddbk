@@ -259,7 +259,7 @@ h3
 		// 换购,抢,满立减的背景图片
 		.hot
 			// +border
-			// @extend %show-element
+			@extend %show-element
 			@extend %absolute
 
 			// @extend %negtive-z-index
@@ -268,13 +268,24 @@ h3
 			// +replace-text-with-dimensions("hg.png")
 			top: 0
 			right: 0
+		// flash播放
+		.busy
+			@extend %absolute
+			top: 0
+			right: 0
+			p 
+				@extend %hide-element
+
 
 	// 抢 满立减用不同的背景图片
-	.pic.qiang .hot
-		background-image: url(../images/xsq.png)
+	.pic.qiang 
+		.hot
+			background-image: url(../images/xsq.png)
 
-	.pic.jian .hot
-		background-image: url(../images/mej.png)
+	.pic.jian 
+		.hot
+			background-image: url(../images/mej.png)
+
 
 	// 书名, 为了设置-margin都是块级显示
 	.title
@@ -317,10 +328,11 @@ h3
 	$img-width: 120px
 	$img-height: 120px
 	.pic
-		// width: $img-width
-		// height: $img-height
+		width: $img-width
+		height: $img-height
 		// 显式设置尺寸，为lazyload提前获得宽高
 		img
+			// +border
 			width: $img-width
 			height: $img-height
 
