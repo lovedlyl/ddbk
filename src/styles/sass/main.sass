@@ -1131,7 +1131,6 @@ form
 		@extend %dotted-gray-bottom
 
 		@extend %relative
-
 		margin-left: 30px
 		padding-bottom: 20px
 
@@ -1139,6 +1138,7 @@ form
 		img
 			// +border
 			width: $img-width
+			height: 145px
 
 		.name
 			@extend %show-element
@@ -1231,6 +1231,9 @@ form
 
 		margin-right: 40px
 		width: $img-width
+		img 
+			width: 145px
+			height: 145px
 
 		.name
 			line-height: 42px
@@ -1303,6 +1306,7 @@ form
 
 	img
 		width: $sidebar-width
+		height: 120px
 
 // 作者推荐结束!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -1491,7 +1495,10 @@ form
 	// 所有链接和图片都为块状显示
 	a, img
 		@extend %show-element
-
+		
+	a img 
+		width: 150px
+		height: 150px
 	// 顶部链接用背景图片,238px
 	.community
 		+replace-with-image("../images/book_community_bg.png", 238px, 84px)

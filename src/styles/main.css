@@ -635,6 +635,7 @@ h3 {
 
 .space-pic img {
   width: 1200px;
+  height: 65px;
 }
 
 .space-pics {
@@ -647,6 +648,7 @@ h3 {
 }
 .space-pics img {
   width: 382px;
+  height: 140px;
 }
 
 .area .head, .service > a, .company > a, .my > a {
@@ -1221,6 +1223,7 @@ form input[type="button"] {
 }
 .author-main-body .horizontal-author img {
   width: 145px;
+  height: 145px;
 }
 .author-main-body .horizontal-author .name {
   margin-top: -125px;
@@ -1277,6 +1280,10 @@ form input[type="button"] {
   margin-right: 40px;
   width: 145px;
 }
+.author-main-body .author-vertical img {
+  width: 145px;
+  height: 145px;
+}
 .author-main-body .author-vertical .name {
   line-height: 42px;
 }
@@ -1312,6 +1319,7 @@ form input[type="button"] {
 }
 .author-sidebar img {
   width: 240px;
+  height: 120px;
 }
 
 .author + .space-pics {
@@ -1377,6 +1385,10 @@ form input[type="button"] {
   color: #ff5d5d;
 }
 
+.reader-suggest-sidebar a img {
+  width: 150px;
+  height: 150px;
+}
 .reader-suggest-sidebar .community {
   background: url(../images/book_community_bg.png) 50% 50% no-repeat;
   width: 238px;

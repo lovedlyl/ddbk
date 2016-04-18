@@ -16,21 +16,23 @@
 // 说明:需要手动设置高度和宽度
 
 jQuery.fn.slider = function(options) {
+    var $this = $(this);
     // 如果元素不足2个不进行此操作
-    if (this.length <= 1)
-        return this;
+    if ($this.length <= 1)
+        return $this;
     options = options || {};
     // 还会克隆首位两个原子,所以+2
     var width = options.width,
         height = options.height,
-        itemsNum = this.length + 2;
+        itemsNum = this.length + 2,
+        lazyload = (jQuery.fn.lazyload && options.lazyload) || false;
 
     // var _oldDisplay = this.css("display");
     // height = this.css("display", "block").outerHeight(true);
     // width = this.css("display", "block").outerWidth(true)
     // this.css("display", _oldDisplay);
     // 如果没有提供高度和宽度报错
-    if(!width || !height){
+    if (!width || !height) {
         console.error("没有提供滑块的宽度或高度")
     }
     // 增添的html
@@ -47,8 +49,8 @@ jQuery.fn.slider = function(options) {
     }
     html.btns += "</ul>";
     // 将克隆的两个元素加上去
-    this.wrapAll(html.outer).addClass("slide-item");
-    var slideList = this.parent(),
+    $this.wrapAll(html.outer).addClass("slide-item");
+    var slideList = $this.parent(),
         slide = slideList.parent(),
         // 当前可见item的索引
         currentIndex = 1,
@@ -74,11 +76,11 @@ jQuery.fn.slider = function(options) {
                 top: 0
             },
             jumpTop: {
-                top: height/2 - 12
+                top: height / 2 - 12
             }
         };
-    this.eq(0).clone(true).appendTo(slideList);
-    this.eq(-1).clone(true).prependTo(slideList);
+    $this.eq(0).clone(true).appendTo(slideList);
+    $this.eq(-1).clone(true).prependTo(slideList);
     // 设置.slide, .slide-list, slide-child的样式
     slide.append(html.prev + html.next + html.btns).css(styles.slide);
     slideList.css(styles.slideList)
@@ -90,7 +92,13 @@ jQuery.fn.slider = function(options) {
 
     var btns = slide.find(".slide-btns > li"),
         prev = slide.find(".slide-prev"),
-        next = slide.find(".slide-next");
+        next = slide.find(".slide-next"),
+        slideItems = slide.find(".slide-item"),
+        // 用于lazyload的分组
+        firstGroup = slideItems.eq(1),
+        // 怎样为不可见加上lazyload????
+        restGroup = slideItems.slice(2).add(slideItems.eq(0));
+
     // 设置翻页按钮的相对高度
     prev.add(next).css(styles.jumpTop);
     // 初始化完成----------------------------------
@@ -111,6 +119,10 @@ jQuery.fn.slider = function(options) {
             if (newLeft == 0) {
                 slideList.css("left", -width * (itemsNum - 2))
             }
+
+            if(lazyload && currentIndex != 1){
+                restGroup.eq(currentIndex).trigger('inView')
+            }
         });
 
     }
@@ -126,6 +138,7 @@ jQuery.fn.slider = function(options) {
             currentIndex = itemsNum - 2;
         }
         btns.eq(currentIndex - 1).addClass('on').siblings().removeClass('on');
+
     }
     showButton();
 
@@ -168,6 +181,26 @@ jQuery.fn.slider = function(options) {
         go(step);
     });
 
+    // 加入lazyload功能
+    if (lazyload) {
+        // var images = target.find("img");
+        // console.log(firstGroup.html(), restGroup.length)
+            // 初始化需要延迟加载的图片
+            // console.log(slideItems)
+        firstGroup.add(restGroup).initLazy();
 
-    return this;
+        // 延迟加载第一组元素
+        firstGroup.find("img").lazyload({ effect: "fadeIn", threshold: 200 });
+        // 延迟加载不可见元素
+        restGroup.bind('inView', function(event) {
+            console.log("invew")
+            restGroup.find("img").lazyload({ effect: "show" });
+            // console.log(this);
+
+        });
+
+    }
+
+
+    return $this;
 }
