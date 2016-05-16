@@ -12,6 +12,7 @@ var htmlMin = require("gulp-htmlmin");
 var rename = require("gulp-rename");
 var concat = require("gulp-concat");
 
+
 // // 测试提取需要的包
 // var domSrc = require("gulp-dom-src");
 // var cheerio = require("gulp-cheerio");
@@ -80,13 +81,6 @@ gulp.task("venderJquery", function() {
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest("src/scripts"))
-        .pipe(gulp.dest("../lovedlyl.github.io/dangdang/scripts"))
-})
-
-gulp.task("lazyload", function() {
-    gulp.src(["bower_components/jquery_lazyload/jquery.lazyload.js"
-        ])
         .pipe(gulp.dest("src/scripts"))
         .pipe(gulp.dest("../lovedlyl.github.io/dangdang/scripts"))
 })
